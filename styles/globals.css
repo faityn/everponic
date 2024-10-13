@@ -1,0 +1,899 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'CaviarDreamsBold';
+    src: url('fonts/caviar/CaviarDreams_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('fonts/caviar/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NagomiGokubosoGothic';
+    src: url('fonts/gothic/NagomiGokubosoGothic-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuickSandBold';
+    src: url('fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuickSandSemiBold';
+    src: url('fonts/quicksand/Quicksand-SemiBold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuickSandMedium';
+    src: url('fonts/quicksand/Quicksand-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuickSandRegular';
+    src: url('fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuickSandLight';
+    src: url('fonts/quicksand/Quicksand-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('fonts/roboto/Roboto-Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('fonts/roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.fontRobotoBold {
+    font-family: RobotoBold;
+    font-weight: bold;
+}
+.fontRobotoMedium {
+    font-family: RobotoMedium;
+}
+
+.fontRobotoRegular {
+    font-family: RobotoRegular;
+    font-weight: normal;
+}
+
+.fontRobotoLight {
+    font-family: RobotoLight;
+    font-weight: 300;
+}
+
+.fontRobotoThin {
+    font-family: RobotoThin;
+    font-weight: 200;
+}
+
+/* Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: lightcyan;
+}
+
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #b4beca;
+    border-radius: 14px;
+    border: 2px solid #b4beca;
+}
+
+.translate-z-0 {
+    transform: translateZ(0px);
+}
+
+.mySwiper>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    color: #f13024;
+}
+
+.swiper-button-prev:after {
+    position: absolute;
+    left: -20px;
+    z-index: 111111;
+}
+
+
+
+
+.activeBlock {
+    cursor: pointer;
+    filter: drop-shadow(-1px -1px 6px rgba(0, 115, 255, 1))
+    /* fill-opacity: 0.5; */
+}
+
+.active path {
+    cursor: pointer;
+    filter: drop-shadow(-1px -1px 6px rgba(0, 115, 255, 0.1));
+    fill-opacity: 0;
+}
+
+.active:hover {
+    filter: drop-shadow(-1px -1px 6px rgba(0, 115, 255, 0.7));
+    fill-opacity: 0;
+}
+
+.active polygon {
+    cursor: pointer;
+    fill-opacity: 0.5;
+}
+
+.active rect {
+    cursor: pointer;
+    fill-opacity: 1;
+}
+
+
+/* <=================================================================> */
+
+@layer utilities {
+    .snap {
+        scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+    }
+    .snap-y {
+        --scroll-snap-direction: y;
+    }
+    .snap-mandatory {
+        --scroll-snap-constraint: mandatory;
+    }
+    .snap-start {
+        scroll-snap-align: start;
+    }
+}
+
+@layer base {
+    body {
+        
+        @apply leading-relaxed;
+    }
+    .page {
+        @apply w-full;
+    }
+    .h1 {
+        @apply text-[35px] leading-tight mb-8 font-semibold;
+    }
+    .h2 {
+        @apply text-[35px] leading-tight mb-4 font-semibold;
+    }
+    .h4 {
+        @apply text-[25px] leading-tight mb-4 font-semibold;
+    }
+    p {
+        @apply leading-[1.8] text-white/60 font-light;
+    }
+    .btn,
+    .input {
+        @apply h-[52px];
+    }
+    .input {
+        @apply w-full h-[52px] rounded-lg pl-6 capitalize;
+    }
+    .input,
+    .textarea {
+        @apply bg-transparent outline-none  border border-white/20 ;
+    }
+    .textarea {
+        @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+    }
+}
+
+.customStepLine {
+    width: calc(100% - 2.5rem - 1rem);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* .container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr) minmax(
+      200px,
+      1fr
+    );
+  gap: 20px;
+  padding: 20px;
+} */
+
+
+/* Styling for the sidebars */
+
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.sidebar.left {
+    /* Custom styles for the left sidebar */
+    border-right: 1px solid #ccc;
+    /* Example: Add a border to the right side of the left sidebar */
+    height: 100%;
+    /* Example: Make the left sidebar full height */
+    display: flex;
+    /* Example: Use flexbox to align the content vertically */
+    flex-direction: column;
+    /* Example: Stack the content vertically */
+    justify-content: center;
+    /* Example: Vertically center the content */
+    align-items: center;
+    /* Example: Horizontally center the content */
+}
+
+
+/* Styling for the right sidebar */
+
+.sidebar.right {
+    /* Custom styles for the right sidebar */
+    border-left: 1px solid #ccc;
+    /* Example: Add a border to the left side of the right sidebar */
+    height: 100%;
+    /* Example: Make the right sidebar full height */
+    display: flex;
+    /* Example: Use flexbox to align the content vertically */
+    flex-direction: column;
+    /* Example: Stack the content vertically */
+    justify-content: center;
+    /* Example: Vertically center the content */
+    align-items: center;
+    /* Example: Horizontally center the content */
+}
+
+
+/* map style */
+
+.tippy-box {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding-bottom: 2px;
+}
+
+.tippy-content {
+    border: none !important;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 8px !important;
+}
+
+.tippy-arrow {
+    color: white !important;
+}
+
+.a {
+    fill: #fcd475;
+}
+
+.b {
+    fill: #f7b3b4;
+}
+
+.c {
+    fill: #bfe4ec;
+}
+
+.d {
+    fill: #dad9c5;
+}
+
+.e {
+    font-size: 5px;
+}
+
+.ad,
+.ai,
+.e,
+.i,
+.q {
+    font-family: MyriadPro-Regular, Myriad Pro;
+}
+
+.f {
+    letter-spacing: -0.03em;
+}
+
+.g {
+    letter-spacing: 0em;
+}
+
+.h {
+    letter-spacing: -0.01em;
+}
+
+.i {
+    font-size: 4.5px;
+}
+
+.j {
+    letter-spacing: 0em;
+}
+
+.k {
+    letter-spacing: 0em;
+}
+
+.l {
+    letter-spacing: -0.02em;
+}
+
+.m {
+    letter-spacing: -0.02em;
+}
+
+.n {
+    letter-spacing: -0.04em;
+}
+
+.o {
+    letter-spacing: -0.01em;
+}
+
+.p {
+    letter-spacing: -0.02em;
+}
+
+.q {
+    font-size: 3.5px;
+}
+
+.r {
+    letter-spacing: -0.01em;
+}
+
+.s {
+    letter-spacing: 0em;
+}
+
+.t {
+    letter-spacing: -0.02em;
+}
+
+.u {
+    letter-spacing: -0.02em;
+}
+
+.v {
+    letter-spacing: -0.01em;
+}
+
+.w {
+    letter-spacing: -0.03em;
+}
+
+.x {
+    letter-spacing: 0.01em;
+}
+
+.y {
+    letter-spacing: -0.01em;
+}
+
+.z {
+    letter-spacing: -0.08em;
+}
+
+.aa {
+    letter-spacing: -0.04em;
+}
+
+.ab {
+    letter-spacing: -0.01em;
+}
+
+.ac {
+    letter-spacing: 0em;
+}
+
+.ad {
+    font-size: 5.3px;
+}
+
+.ae {
+    letter-spacing: -0.01em;
+}
+
+.af {
+    letter-spacing: 0em;
+}
+
+.ag {
+    letter-spacing: 0.01em;
+}
+
+.ah {
+    fill: #8bd080;
+}
+
+.ai {
+    font-size: 6px;
+}
+
+.aj {
+    letter-spacing: 0em;
+}
+
+.ak {
+    letter-spacing: 0.01em;
+}
+
+.al {
+    letter-spacing: 0em;
+}
+
+.am {
+    letter-spacing: -0.01em;
+}
+
+.an {
+    letter-spacing: -0.04em;
+}
+
+.ao {
+    letter-spacing: -0.03em;
+}
+
+.ap {
+    letter-spacing: 0.02em;
+}
+
+.aq {
+    letter-spacing: -0.01em;
+}
+
+.ar {
+    fill: #3397bb;
+}
+
+.as {
+    fill: #d3294d;
+}
+
+.at {
+    letter-spacing: -0.08em;
+}
+
+li>ul {
+    transform: translatex(100%) scale(0);
+}
+
+li:hover>ul {
+    transform: translatex(101%) scale(1);
+}
+
+li>button svg {
+    transform: rotate(-90deg);
+}
+
+li:hover>button svg {
+    transform: rotate(-270deg);
+}
+
+
+/* Below styles fake what can be achieved with the tailwind config
+     you need to add the group-hover variant to scale and define your custom
+     min width style.
+  	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
+  	 for implementation with config file
+  */
+
+.group:hover .group-hover\:scale-100 {
+    transform: scale(1);
+}
+
+.group:hover .group-hover\:-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.scale-0 {
+    transform: scale(0);
+}
+
+.min-w-32 {
+    min-width: 8rem;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-number-input input:focus {
+    outline: none !important;
+}
+
+.custom-number-input button:focus {
+    outline: none !important;
+}
+
+body {
+    font-family: 'Pretendard';
+    top: 0px !important;
+    position: static !important;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.skiptranslate {
+    display: none !important;
+}
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    color: blue !important;
+}
+
+.fontHelvetica {
+    font-family: Helvetica, sans-serif;
+}
+
+.fontHelveticaLight {
+    font-family: Helvetica Light, sans-serif;
+    font-weight: 300 !important;
+}
+
+.fontCaviarBold {
+    font-family: CaviarDreamsBold;
+    font-weight: bold;
+}
+
+.fontCaviar {
+    font-family: CaviarDreams;
+    font-weight: normal;
+}
+
+.fontNagomiGokubosoGothic {
+    font-family: NagomiGokubosoGothic;
+    font-weight: bold;
+}
+
+.fontQuickSandBold {
+    font-family: QuickSandBold;
+    font-weight: bold;
+}
+
+.fontQuickSandMedium {
+    font-family: QuickSandMedium;
+    font-weight: 600;
+}
+
+.fontQuickSandRegular {
+    font-family: QuickSandRegular;
+    font-weight: normal;
+}
+
+.fontQuickSandLight {
+    font-family: QuickSandLight;
+    font-weight: lighter;
+}
+
+.bgCoverLeft {
+    background-position: left -100px;
+}
+
+.ulStyledContent ul li {
+    list-style: disc;
+    margin-left: 50px;
+}
+
+.svg-container {
+    /* background-image: url('/111.jpg'); */
+    /* background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  max-width: 2500px;  */
+    /* Center the container on the page */
+}
+
+svg {
+    /* width: 100%;
+  height: auto; */
+    display: block;
+    /* margin: 0 auto;  */
+}
+
+#Yonsei-accessories-RED {
+    color: #d3294d;
+    background-color: #d3294d;
+}
+
+.Yonsei-accessories-RED:hover {
+    fill: #d3294d;
+    opacity: 1;
+    /* color: #d3294d;
+background-color: #d3294d; */
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+    visibility: hidden;
+}
+
+#mask {
+    position: fixed;
+    z-index: 9000;
+    background-color: #000;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.window {
+    display: none;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.cont {
+    width: 100%;
+    height: 100%;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
+}
+
+#loading-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+
+.horizontal-slider {
+    width: 100%;
+    height: 50px;
+}
+
+.horizontal-slider .example-track {
+    display: flex;
+    top: 10px;
+    height: 7px;
+    background-color: #dee2f1;
+    justify-content: center !important;
+}
+
+.horizontal-slider .example-track.track_div {
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 10px;
+}
+
+.example-track.example-track-0 {
+    justify-content: center !important;
+    background: #dee2f1;
+}
+
+.example-track.track_div {
+    justify-content: center !important;
+    margin-left: 20px;
+}
+
+#track_div {
+    justify-content: center !important;
+    background: #dee2f1;
+}
+
+.horizontal-slider .example-thumb {
+    top: 1px;
+    width: 25px;
+    height: 24px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: #25C7F6;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #25C7F6;
+    box-sizing: border-box;
+}
+
+.horizontal-slider .example-mark {
+    top: 1px;
+    width: 25px;
+    height: 24px;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: #25C7F6;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #25C7F6;
+    box-sizing: border-box;
+}
+
+.example-thumb-0 {
+    display: none;
+}
+
+.example-thumb:last-child {
+    display: none;
+}
+
+.popup {
+    z-index: 11;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 600px;
+    max-Height: 600px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.popupContent {
+    text-align: left;
+}
+
+.closeBtn {
+    background-color: #e0c10c;
+    color: #000;
+    border: none;
+    padding: 0 8px;
+    cursor: pointer;
+    position: absolute;
+    top: -27px;
+    right: -21px;
+}
+
+.zIndex1000 {
+    z-index: 100000000 !important;
+}
+
+.react-multiple-carousel__arrow--left {}
+
+.react-multi-carousel-track {
+    list-style: none;
+}
+
+.react-multi-carousel-dot {
+    width: 30px
+}
+
+.carousel-with-custom-dots {
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.custom-dot {
+    border: none;
+    margin: 1px;
+    background-color: #D0D0D0;
+    width: 40px;
+    height: 4px;
+}
+
+.custom-dot--active {
+    background-color: #000000;
+}
+
+.labelContainer input:checked~.checkmark {
+    background-color: #000000;
+}
+
+.labelContainer input~.checkmark2 {
+    border: solid 2px #fff;
+}
+
+.labelContainer input:checked~.checkmark2 {
+    border: solid 2px #000;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.labelContainer input:checked~.checkmark:after {
+    display: block;
+}
+
+.labelContainer .checkmark:after {}
+
+.success_bg {
+    background-image: url('/success_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.fontPretendard{
+    font-family: 'Pretendard';
+}
