@@ -1,7 +1,15 @@
+import PageBanner from "@src/components/Banner/PageBanner";
 import SectionOneItem from "@src/components/PlantFactory/SectionOneItem";
 import SectionThreeItem from "@src/components/PlantFactory/SectionThreeItem";
 import SectionTwoItem from "@src/components/PlantFactory/SectionTwoItem";
 import Image from "next/image";
+
+const BannerInfo = {
+    title: "PLANT FACTORY",
+    text: "Hydroponic vertical system maximizes cultivation space  to increase yields and minimizes water consumption by water cycling system.\nBy utilizing ICT technology and an automated control  system, we are able to produce always",
+    white_text: "Fresh plants in an optimized environment.",
+    img: "/images/p1.png",
+};
 
 const itemList = [
     {
@@ -85,49 +93,7 @@ const itemList3 = [
 const Page = () => {
     return (
         <div className="h-full relative">
-            <div className=" w-full h-full min-h-[500px] relative rounded-b-[34px]">
-                <Image
-                    src="/images/p1.png"
-                    alt="basket"
-                    className="min-h-[500px] object-cover object-center w-full rounded-b-[34px]"
-                    width="130"
-                    height="50"
-                    unoptimized={true}
-                    priority={true}
-                />
-
-                <div className="absolute h-full w-full bg-black/80 top-0 flex flex-col items-center justify-center rounded-b-[34px]">
-                    <div className="  flex gap-3 items-center">
-                        <div className=" leading-[62px]">
-                            <Image
-                                src="/svg/logo.svg"
-                                alt="basket"
-                                className="w-[83px] h-[34px] max-sm:w-[57px] max-sm:h-[24px] object-cover object-center "
-                                width="83"
-                                height="34"
-                                unoptimized={true}
-                                priority={true}
-                            />{" "}
-                        </div>
-
-                        <div className=" text-[48px] leading-[62px] max-sm:text-[32px] max-sm:leading-[41px] text-primary fontRobotoMedium">
-                            PLANT FACTORY
-                        </div>
-                    </div>
-
-                    <div className="text-center max-w-[1030px] text-[30px] leading-[48px] max-xl:text-[26px] max-xl:leading-[40px] max-sm:text-xl text-[#cccccc] fontPretendard font-normal">
-                        Hydroponic vertical system maximizes cultivation space
-                        to increase yields and minimizes water consumption by
-                        water cycling system.
-                        <br />
-                        By utilizing ICT technology and an automated control
-                        system, we are able to produce always{" "}
-                        <span className="text-white">
-                            Fresh plants in an optimized environment.
-                        </span>
-                    </div>
-                </div>
-            </div>
+            <PageBanner info={BannerInfo} />
 
             <div className="   flex w-full max-md:flex-col">
                 {itemList?.map((item, index) => {
@@ -242,7 +208,7 @@ const Page = () => {
                     <div className="flex max-md:flex-col">
                         <div className="w-full ">
                             <p className="text-[48px] leading-[57px] max-w-[648px] max-md:max-w-[358px] max-md:mx-auto font-medium text-[#cccccc] max-md:text-center max-md:text-[32px] max-md:leading-[38px]">
-                                Modular Hydroponic  Vertical Container
+                                Modular Hydroponic Vertical Container
                             </p>
                         </div>
                         <div className="w-full flex justify-end max-md:justify-center pt-5">

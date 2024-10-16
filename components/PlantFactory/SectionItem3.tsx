@@ -5,7 +5,7 @@ type props = {
     subText?: string;
     img?: string;
 };
-const SectionTwoItem = ({ title, subText, img }: props) => {
+const Section4Item = ({ title, subText, img }: props) => {
     return (
         <div className="w-full ">
             {" "}
@@ -20,9 +20,11 @@ const SectionTwoItem = ({ title, subText, img }: props) => {
                     priority={true}
                 />{" "}
             </div>
-            <div className="text-primary text-xl mb-2 font-medium text-center">{title} <span className="text-[#353644]">{subText}</span></div>
+            <div className="text-primary text-xl mb-2 font-medium text-center">
+                {title} <span className="text-[#353644]">{subText}</span>
+            </div>
         </div>
     );
 };
 
-export default SectionTwoItem;
+export default Section4Item;

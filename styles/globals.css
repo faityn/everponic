@@ -2,97 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: 'CaviarDreamsBold';
-    src: url('fonts/caviar/CaviarDreams_Bold.ttf') format('truetype');
+    font-family: "CaviarDreamsBold";
+    src: url("fonts/caviar/CaviarDreams_Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'CaviarDreams';
-    src: url('fonts/caviar/CaviarDreams.ttf') format('truetype');
+    font-family: "CaviarDreams";
+    src: url("fonts/caviar/CaviarDreams.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'NagomiGokubosoGothic';
-    src: url('fonts/gothic/NagomiGokubosoGothic-ExtraLight.ttf') format('truetype');
+    font-family: "NagomiGokubosoGothic";
+    src: url("fonts/gothic/NagomiGokubosoGothic-ExtraLight.ttf")
+        format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'QuickSandBold';
-    src: url('fonts/quicksand/Quicksand-Bold.ttf') format('truetype');
+    font-family: "QuickSandBold";
+    src: url("fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'QuickSandSemiBold';
-    src: url('fonts/quicksand/Quicksand-SemiBold.ttf') format('truetype');
+    font-family: "QuickSandSemiBold";
+    src: url("fonts/quicksand/Quicksand-SemiBold.ttf") format("truetype");
     font-weight: bolder;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'QuickSandMedium';
-    src: url('fonts/quicksand/Quicksand-Medium.ttf') format('truetype');
+    font-family: "QuickSandMedium";
+    src: url("fonts/quicksand/Quicksand-Medium.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'QuickSandRegular';
-    src: url('fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+    font-family: "QuickSandRegular";
+    src: url("fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'QuickSandLight';
-    src: url('fonts/quicksand/Quicksand-Light.ttf') format('truetype');
+    font-family: "QuickSandLight";
+    src: url("fonts/quicksand/Quicksand-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RobotoThin';
-    src: url('fonts/roboto/Roboto-Thin.ttf') format('truetype');
+    font-family: "RobotoThin";
+    src: url("fonts/roboto/Roboto-Thin.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RobotoLight';
-    src: url('fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-family: "RobotoLight";
+    src: url("fonts/roboto/Roboto-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'RobotoRegular';
-    src: url('fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-family: "RobotoRegular";
+    src: url("fonts/roboto/Roboto-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RobotoMedium';
-    src: url('fonts/roboto/Roboto-Medium.ttf') format('truetype');
+    font-family: "RobotoMedium";
+    src: url("fonts/roboto/Roboto-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'RobotoBold';
-    src: url('fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-family: "RobotoBold";
+    src: url("fonts/roboto/Roboto-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "BSSD-Thin";
+    src: url("fonts/bssd/BSSD-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BSSD-Light";
+    src: url("fonts/bssd/BSSD-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BSSD-Regular";
+    src: url("fonts/bssd/BSSD-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BSSD-Medium";
+    src: url("fonts/bssd/BSSD-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BSSD-SemiBold";
+    src: url("fonts/bssd/BSSD-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BSSD-Bold";
+    src: url("fonts/bssd/BSSD-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BSSD-ExtraBold";
+    src: url("fonts/bssd/BSSD-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Varelmo";
+    src: url("fonts/varelmo/Varelmo.ttf") format("truetype");
+}
+
+.fontVarelmo {
+    font-family: Varelmo;
+}
+
+.fontBSSD {
+    font-family: "Big Shoulders Stencil Display", sans-serif;
+}
+
+.fontBSSDBold {
+    font-family: BSSD-Bold;
+}
+.fontBSSDMedium {
+    font-family: BSSD-Medium;
+}
+
+.fontBSSDRegular {
+    font-family: BSSD-Regular;
+}
+
+.fontBSSDLight {
+    font-family: BSSD-Light;
+}
 
 .fontRobotoBold {
     font-family: RobotoBold;
@@ -124,7 +188,6 @@
     scrollbar-color: lightcyan;
 }
 
-
 /* Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
@@ -146,8 +209,9 @@
     transform: translateZ(0px);
 }
 
-.mySwiper>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.mySwiper > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: #000000;
@@ -166,12 +230,9 @@
     z-index: 111111;
 }
 
-
-
-
 .activeBlock {
     cursor: pointer;
-    filter: drop-shadow(-1px -1px 6px rgba(0, 115, 255, 1))
+    filter: drop-shadow(-1px -1px 6px rgba(0, 115, 255, 1));
     /* fill-opacity: 0.5; */
 }
 
@@ -196,12 +257,12 @@
     fill-opacity: 1;
 }
 
-
 /* <=================================================================> */
 
 @layer utilities {
     .snap {
-        scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+        scroll-snap-type: var(--scroll-snap-direction)
+            var(--scroll-snap-constraint);
     }
     .snap-y {
         --scroll-snap-direction: y;
@@ -216,7 +277,6 @@
 
 @layer base {
     body {
-        
         @apply leading-relaxed;
     }
     .page {
@@ -243,7 +303,7 @@
     }
     .input,
     .textarea {
-        @apply bg-transparent outline-none  border border-white/20 ;
+        @apply bg-transparent outline-none  border border-white/20;
     }
     .textarea {
         @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
@@ -256,7 +316,6 @@
     transform: translate(-50%, -50%);
 }
 
-
 /* .container {
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr) minmax(
@@ -266,7 +325,6 @@
   gap: 20px;
   padding: 20px;
 } */
-
 
 /* Styling for the sidebars */
 
@@ -291,7 +349,6 @@
     /* Example: Horizontally center the content */
 }
 
-
 /* Styling for the right sidebar */
 
 .sidebar.right {
@@ -309,7 +366,6 @@
     align-items: center;
     /* Example: Horizontally center the content */
 }
-
 
 /* map style */
 
@@ -333,214 +389,21 @@
     color: white !important;
 }
 
-.a {
-    fill: #fcd475;
-}
-
-.b {
-    fill: #f7b3b4;
-}
-
-.c {
-    fill: #bfe4ec;
-}
-
-.d {
-    fill: #dad9c5;
-}
-
-.e {
-    font-size: 5px;
-}
-
-.ad,
-.ai,
-.e,
-.i,
-.q {
-    font-family: MyriadPro-Regular, Myriad Pro;
-}
-
-.f {
-    letter-spacing: -0.03em;
-}
-
-.g {
-    letter-spacing: 0em;
-}
-
-.h {
-    letter-spacing: -0.01em;
-}
-
-.i {
-    font-size: 4.5px;
-}
-
-.j {
-    letter-spacing: 0em;
-}
-
-.k {
-    letter-spacing: 0em;
-}
-
-.l {
-    letter-spacing: -0.02em;
-}
-
-.m {
-    letter-spacing: -0.02em;
-}
-
-.n {
-    letter-spacing: -0.04em;
-}
-
-.o {
-    letter-spacing: -0.01em;
-}
-
-.p {
-    letter-spacing: -0.02em;
-}
-
-.q {
-    font-size: 3.5px;
-}
-
-.r {
-    letter-spacing: -0.01em;
-}
-
-.s {
-    letter-spacing: 0em;
-}
-
-.t {
-    letter-spacing: -0.02em;
-}
-
-.u {
-    letter-spacing: -0.02em;
-}
-
-.v {
-    letter-spacing: -0.01em;
-}
-
-.w {
-    letter-spacing: -0.03em;
-}
-
-.x {
-    letter-spacing: 0.01em;
-}
-
-.y {
-    letter-spacing: -0.01em;
-}
-
-.z {
-    letter-spacing: -0.08em;
-}
-
-.aa {
-    letter-spacing: -0.04em;
-}
-
-.ab {
-    letter-spacing: -0.01em;
-}
-
-.ac {
-    letter-spacing: 0em;
-}
-
-.ad {
-    font-size: 5.3px;
-}
-
-.ae {
-    letter-spacing: -0.01em;
-}
-
-.af {
-    letter-spacing: 0em;
-}
-
-.ag {
-    letter-spacing: 0.01em;
-}
-
-.ah {
-    fill: #8bd080;
-}
-
-.ai {
-    font-size: 6px;
-}
-
-.aj {
-    letter-spacing: 0em;
-}
-
-.ak {
-    letter-spacing: 0.01em;
-}
-
-.al {
-    letter-spacing: 0em;
-}
-
-.am {
-    letter-spacing: -0.01em;
-}
-
-.an {
-    letter-spacing: -0.04em;
-}
-
-.ao {
-    letter-spacing: -0.03em;
-}
-
-.ap {
-    letter-spacing: 0.02em;
-}
-
-.aq {
-    letter-spacing: -0.01em;
-}
-
-.ar {
-    fill: #3397bb;
-}
-
-.as {
-    fill: #d3294d;
-}
-
-.at {
-    letter-spacing: -0.08em;
-}
-
-li>ul {
+li > ul {
     transform: translatex(100%) scale(0);
 }
 
-li:hover>ul {
+li:hover > ul {
     transform: translatex(101%) scale(1);
 }
 
-li>button svg {
+li > button svg {
     transform: rotate(-90deg);
 }
 
-li:hover>button svg {
+li:hover > button svg {
     transform: rotate(-270deg);
 }
-
 
 /* Below styles fake what can be achieved with the tailwind config
      you need to add the group-hover variant to scale and define your custom
@@ -565,8 +428,8 @@ li:hover>button svg {
     min-width: 8rem;
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -580,7 +443,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 body {
-    font-family: 'Pretendard';
+    font-family: "Pretendard";
     top: 0px !important;
     position: static !important;
 }
@@ -614,39 +477,9 @@ body {
     font-weight: 300 !important;
 }
 
-.fontCaviarBold {
-    font-family: CaviarDreamsBold;
-    font-weight: bold;
-}
-
-.fontCaviar {
-    font-family: CaviarDreams;
-    font-weight: normal;
-}
-
 .fontNagomiGokubosoGothic {
     font-family: NagomiGokubosoGothic;
     font-weight: bold;
-}
-
-.fontQuickSandBold {
-    font-family: QuickSandBold;
-    font-weight: bold;
-}
-
-.fontQuickSandMedium {
-    font-family: QuickSandMedium;
-    font-weight: 600;
-}
-
-.fontQuickSandRegular {
-    font-family: QuickSandRegular;
-    font-weight: normal;
-}
-
-.fontQuickSandLight {
-    font-family: QuickSandLight;
-    font-weight: lighter;
 }
 
 .bgCoverLeft {
@@ -777,10 +610,10 @@ background-color: #d3294d; */
     border-radius: 50%;
     font-size: 0.9em;
     text-align: center;
-    background-color: #25C7F6;
+    background-color: #25c7f6;
     color: white;
     cursor: pointer;
-    border: 1px solid #25C7F6;
+    border: 1px solid #25c7f6;
     box-sizing: border-box;
 }
 
@@ -792,10 +625,10 @@ background-color: #d3294d; */
     border-radius: 50%;
     font-size: 0.9em;
     text-align: center;
-    background-color: #25C7F6;
+    background-color: #25c7f6;
     color: white;
     cursor: pointer;
-    border: 1px solid #25C7F6;
+    border: 1px solid #25c7f6;
     box-sizing: border-box;
 }
 
@@ -813,7 +646,7 @@ background-color: #d3294d; */
     top: 50%;
     left: 50%;
     max-width: 600px;
-    max-Height: 600px;
+    max-height: 600px;
     transform: translate(-50%, -50%);
     background-color: #fff;
     border: 1px solid #ddd;
@@ -838,14 +671,15 @@ background-color: #d3294d; */
     z-index: 100000000 !important;
 }
 
-.react-multiple-carousel__arrow--left {}
+.react-multiple-carousel__arrow--left {
+}
 
 .react-multi-carousel-track {
     list-style: none;
 }
 
 .react-multi-carousel-dot {
-    width: 30px
+    width: 30px;
 }
 
 .carousel-with-custom-dots {
@@ -856,7 +690,7 @@ background-color: #d3294d; */
 .custom-dot {
     border: none;
     margin: 1px;
-    background-color: #D0D0D0;
+    background-color: #d0d0d0;
     width: 40px;
     height: 4px;
 }
@@ -865,15 +699,15 @@ background-color: #d3294d; */
     background-color: #000000;
 }
 
-.labelContainer input:checked~.checkmark {
+.labelContainer input:checked ~ .checkmark {
     background-color: #000000;
 }
 
-.labelContainer input~.checkmark2 {
+.labelContainer input ~ .checkmark2 {
     border: solid 2px #fff;
 }
 
-.labelContainer input:checked~.checkmark2 {
+.labelContainer input:checked ~ .checkmark2 {
     border: solid 2px #000;
 }
 
@@ -883,17 +717,20 @@ background-color: #d3294d; */
     display: none;
 }
 
-.labelContainer input:checked~.checkmark:after {
+.labelContainer input:checked ~ .checkmark:after {
     display: block;
 }
 
-.labelContainer .checkmark:after {}
+.labelContainer .checkmark:after {
+}
 
 .success_bg {
-    background-image: url('/success_bg.png');
+    background-image: url("/success_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
-.fontPretendard{
-    font-family: 'Pretendard';
+.fontPretendard {
+    font-family: "Pretendard";
+}
+.item_bg {
 }
