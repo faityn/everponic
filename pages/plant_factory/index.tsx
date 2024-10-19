@@ -15,22 +15,22 @@ const itemList = [
     {
         title: "Dimensions",
         subText: ["2.438M x 12.192M x 2.896M", "3M x 8.5M x 3M"],
-        img: "/svg/s1.svg",
+        img: "/images/a1.gif",
     },
     {
         title: "Weight",
         subText: ["4 ~ 6 Ton"],
-        img: "/svg/s2.svg",
+        img: "/images/a2.gif",
     },
     {
         title: "Power Usage",
         subText: ["100 ~ 200 kWh/day (avg.)"],
-        img: "/svg/s3.svg",
+        img: "/images/a3.gif",
     },
     {
         title: "Water Usage",
         subText: ["200 ~ 400 liter/month (avg.)"],
-        img: "/svg/s4.svg",
+        img: "/images/a4.gif",
     },
 ];
 
@@ -57,37 +57,37 @@ const itemList3 = [
         title: "Easy Control",
         subText:
             "Easy to use and manage multiple devices (PH&EC concentration controller, Ventilation fan, LED, Temperature, Humidity, Watering system) that will enable you to automate your cultivation with a few simple clicks, anytime/anywhere.",
-        img: "/svg/m1.svg",
+        img: "/images/a5.gif",
     },
     {
         title: "Year-Round Production",
         subText:
             "Our system allows for the cultivation of a variety of fresh crops throughout the year in a container that is independent of external conditions, regardless of geographical location and external climate conditions.",
-        img: "/svg/m2.svg",
+        img: "/images/a6.gif",
     },
     {
         title: "Minimal Water Usage",
         subText:
             "Water cycling system can reduce water usage by more than 90% compared to conventional farming methods.",
-        img: "/svg/m3.svg",
+        img: "/images/a7.gif",
     },
     {
         title: "Work Efficiency",
         subText:
             "Vertical growing tower allows workers at ground level to access and care for crops at all heights, eliminating the need for a scissor lift. Also, crop choices can be expanded.",
-        img: "/svg/m4.svg",
+        img: "/images/a8.gif",
     },
     {
         title: "Less pesticides",
         subText:
             "All produce is grown without the use of pesticides, herbicides or synthetic fertilizers.",
-        img: "/svg/m5.svg",
+        img: "/images/a9.gif",
     },
     {
         title: "High Quality & Yields",
         subText:
             "Possible to produce high quality & yields of plants annually in a container, which is equivalent to the effect of more than about 4,000 ft2 (100평) of traditional open field farming. This maximizes space efficiency.",
-        img: "/svg/m6.svg",
+        img: "/images/a10.gif",
     },
 ];
 const Page = () => {

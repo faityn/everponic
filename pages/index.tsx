@@ -2,19 +2,26 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Mousewheel } from "swiper/modules";
+import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const Home = () => {
     const ref = useRef(null);
-
+    const swiperRef = useRef<SwiperCore>();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [direction, setDirection] = useState<any>("vertical");
     const [autoHeight, setAutoHeight] = useState(true);
 
     const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
 
+    const slideTo2 = () => {
+        if (swiperRef.current) {
+            swiperRef.current.slideTo(0); // Jump to the first slide (index 0)
+        }
+    };
     useEffect(() => {
         if (screenSize?.width < 500) {
             setDirection("horizontal");
@@ -176,27 +183,92 @@ const Home = () => {
                 </div>
                 <div className="h-full relative min-h-[700px] overflow-hidden">
                     <div className="flex flex-col max-w-[1800px] m-auto h-full">
-                        <div className=" h-[250px] ">
-                            <img
-                                className="h-auto w-full rounded-[46px] "
-                                src="/service1.png"
-                                alt=""
-                            />
-                        </div>
-                        <div className=" h-[250px]">
-                            <img
-                                className="h-auto w-full rounded-[46px] "
-                                src="/service2.png"
-                                alt=""
-                            />
-                        </div>
-                        <div className=" h-[250px]">
-                            <img
-                                className="h-auto w-full rounded-[46px] "
-                                src="/service3.png"
-                                alt=""
-                            />
-                        </div>
+                        <Swiper
+                            speed={1000}
+                            //autoHeight={autoHeight}
+                            autoplay={{
+                                delay: 8000,
+                                pauseOnMouseEnter: false,
+                            }}
+                            //grabCursor={true}
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper;
+                            }}
+                            slidesPerView={"auto"}
+                            effect={"creative"}
+                            // creativeEffect={{
+                            //     prev: {
+                            //         shadow: true,
+                            //         translate: [-1, 0, "-20%"],
+                            //     },
+                            //     next: {
+                            //         translate: [0, 0, "100%"],
+                            //     },
+                            // }}
+                            mousewheel={true}
+                            loop={false}
+                            direction={"vertical"}
+                            modules={[Pagination, Autoplay, Mousewheel]}
+                            className="mySwiper3 w-full min-h-[860px] max-h-[860px]  "
+                        >
+                            <SwiperSlide className="mx-auto min-h-[600px] max-h-[600px] ">
+                                <Link href="/plant_factory">
+                                    <div className="w-full  ">
+                                        <div className="text-center items-center flex flex-col  justify-center ">
+                                            <img
+                                                className="h-auto w-full rounded-[46px] "
+                                                src="/service1.png"
+                                                alt=""
+                                            />
+                                            <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide className="mx-auto  max-h-[600px] ">
+                                <Link href="/produce">
+                                    <div className="w-full ">
+                                        <div className="text-center  items-center flex flex-col  justify-center ">
+                                            <img
+                                                className="h-auto w-full rounded-[46px] "
+                                                src="/service2.png"
+                                                alt=""
+                                            />
+                                            <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide className="mx-auto max-h-[600px] ">
+                                <Link href="/distribution">
+                                    <div className="w-full ">
+                                        <div className="text-center  items-center flex flex-col  justify-center ">
+                                            <img
+                                                className="h-auto w-full rounded-[46px] "
+                                                src="/service3.png"
+                                                alt=""
+                                            />
+                                            <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>
+                            <SwiperSlide className="mx-auto ">
+                                <div
+                                    className="w-full cursor-pointer"
+                                    onClick={() => slideTo2()}
+                                >
+                                    <div className="text-center  items-center flex flex-col  justify-center ">
+                                        <img
+                                            className="h-auto w-full rounded-[46px] "
+                                            src="/service4.png"
+                                            alt=""
+                                        />
+                                        <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
                 </div>
             </div>
