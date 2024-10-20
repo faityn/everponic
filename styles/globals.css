@@ -734,3 +734,7 @@ background-color: #d3294d; */
 }
 .item_bg {
 }
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}

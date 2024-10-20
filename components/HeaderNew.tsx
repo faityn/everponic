@@ -15,7 +15,7 @@ const HeaderNew = () => {
     return (
         <div className=" absolute z-30 w-full flex items-center fontPretendard h-[70px ">
             <nav className=" bg-transparent w-full">
-                <div className="mx-auto max-w-[1490px] px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
                             <div className="flex-shrink-0">
@@ -29,35 +29,120 @@ const HeaderNew = () => {
                                     <div className="ml-10 flex items-baseline space-x-7 ">
                                         <a
                                             href="#"
-                                            className="rounded-md  px-3 py-2 text-md font-medium text-white hover:bg-gray-700"
+                                            className=" px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary"
                                             aria-current="page"
                                         >
                                             Home
                                         </a>
-                                        <a
-                                            href="#"
-                                            className="rounded-md px-3 py-2 text-md font-medium text-white hover:bg-gray-700 hover:text-white"
-                                        >
-                                            Solutions
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className="rounded-md px-3 py-2 text-md font-medium text-white hover:bg-gray-700 hover:text-white"
-                                        >
-                                            About Us
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className="rounded-md px-3 py-2 text-md font-medium text-white hover:bg-gray-700 hover:text-white"
-                                        >
-                                            Media
-                                        </a>
-                                        <a
-                                            href="#"
-                                            className="rounded-md px-3 py-2 text-md font-medium text-white hover:bg-gray-700 hover:text-white"
-                                        >
-                                            Contact
-                                        </a>
+
+                                        <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+                                            <div className="">Solutions</div>
+                                            <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
+                                                <ul className="  rounded-3xl ">
+                                                    <li className="mb-3">
+                                                        <a
+                                                            className=" bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            EP Plant Factory
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            EP Produce
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            EP Distribution
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+                                            <div className="">About Us</div>
+                                            <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
+                                                <ul className="  rounded-3xl ">
+                                                    <li className="mb-3">
+                                                        <a
+                                                            className=" bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            Who We Are
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            Mission & Vision
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            Partners
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+                                            <div className="">Media</div>
+                                            <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
+                                                <ul className="  rounded-3xl ">
+                                                    <li className="mb-3">
+                                                        <a
+                                                            className=" bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            News & Gallery
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            FAQ
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+                                            <div className="">Contact</div>
+                                            <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
+                                                <ul className="  rounded-3xl ">
+                                                    <li className="mb-3">
+                                                        <a
+                                                            className=" bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            Contact
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
+                                                            href="#"
+                                                        >
+                                                            Recruit
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
