@@ -56,7 +56,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout type="main">
       <div id="mainLayout">
         <Head>
           <title>EVERPONIC: Home </title>
@@ -185,7 +185,10 @@ const Home = () => {
         <div className="bg-[#111111] pt-[100px] pb-[74px] h-full relative">
           <div className="fontPretendard text-[64px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[80px] text-center">
             We provides{" "}
-            <span className="text-white">One-stop CARE service </span> <br />
+            <span className="text-white font-medium">
+              <span>One-stop </span> CARE service{" "}
+            </span>{" "}
+            <br />
             for customers with easy work and <br /> stable profit generation.
           </div>
           <div className="h-full relative min-h-[700px] overflow-hidden">

@@ -9,7 +9,7 @@ const Nav = () => {
       <div className="flex max-lg:flex-col items-start max-w-[1800px] w-full gap-5 m-auto h-full pb-[60px] ">
         <div className="w-full flex max-lg:justify-center max-sm:px-5">
           <Image
-            src="/logo-white.svg"
+            src="/svg/logo_footer_white.svg"
             alt="basket"
             className=" h-auto w-[366px]  rounded-lg"
             width="366"

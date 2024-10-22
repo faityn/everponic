@@ -1,19 +1,45 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const HeaderLogo = () => {
+type props = {
+  type?: string;
+  color?: string;
+};
+const HeaderLogo = ({ type, color }: props) => {
   return (
     <div className="flex flex-shrink-0 fon items-center max-sm:text-lg text-2xl text-primary mr-4 max-md:ml-3">
       <Link href="/">
-        <Image
-          src="/logo-white.svg"
-          alt="basket"
-          className="max-sm:w-24 h-auto w-40 max-w-sm object-cover object-center "
-          width="130"
-          height="50"
-          unoptimized={true}
-          priority={true}
-        />
+        {type === "main" ? (
+          <Image
+            src="/svg/logo_head_white.svg"
+            alt="basket"
+            className="max-sm:w-24 h-auto w-40 max-w-sm object-cover object-center "
+            width="130"
+            height="50"
+            unoptimized={true}
+            priority={true}
+          />
+        ) : color === "white" ? (
+          <Image
+            src="/svg/logo_head_mini_white.svg"
+            alt="basket"
+            className="max-sm:w-16 h-auto w-16 object-cover object-center "
+            width="130"
+            height="50"
+            unoptimized={true}
+            priority={true}
+          />
+        ) : (
+          <Image
+            src="/svg/logo_head_mini_black.svg"
+            alt="basket"
+            className="max-sm:w-16 h-auto w-16 object-cover object-center "
+            width="130"
+            height="50"
+            unoptimized={true}
+            priority={true}
+          />
+        )}
       </Link>
     </div>
   );
