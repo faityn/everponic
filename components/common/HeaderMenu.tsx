@@ -3,8 +3,13 @@ import { useRecoilState } from "recoil";
 import { dropLangAtom, mobileMenuAtom } from "../atom";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
+import { IoCloseSharp } from "react-icons/io5";
 
-const HeaderMenu = () => {
+type props = {
+  color?: string;
+  type?: string;
+};
+const HeaderMenu = ({ color, type }: props) => {
   const [langDrop, setLangDrop] = useRecoilState(dropLangAtom);
   const [mobileMenu, setMobileMenu] = useRecoilState(mobileMenuAtom);
   const handleLang = () => {
@@ -21,15 +26,21 @@ const HeaderMenu = () => {
             <div className="ml-10 flex items-baseline space-x-12 max-xl:space-x-6">
               <Link
                 href="/"
-                className=" px-3 py-2 text-md font-medium text-white border-b-2 border-transparent hover:border-b-2 hover:border-primary hover:text-primary"
+                className={` px-3 py-2 text-md font-medium ${
+                  color === "white" ? "text-white" : "text-black"
+                }  border-b-2 border-transparent hover:border-b-2 hover:border-primary hover:text-primary`}
                 aria-current="page"
               >
                 Home
               </Link>
 
-              <div className="dropdown inline-block relative px-3 py-2 text-md border-b-2 border-transparent font-medium text-white hover:border-b-2 hover:border-primary hover:text-primary">
+              <div
+                className={`dropdown inline-block relative px-3 py-2 text-md border-b-2 border-transparent font-medium ${
+                  color === "white" ? "text-white" : "text-black"
+                }  hover:border-b-2 hover:border-primary hover:text-primary`}
+              >
                 <div className="">Solutions</div>
-                <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
+                <div className="dropdown-content absolute hidden border bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
                     <li className="mb-2">
                       <Link
@@ -58,9 +69,13 @@ const HeaderMenu = () => {
                   </ul>
                 </div>
               </div>
-              <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+              <div
+                className={`dropdown inline-block relative px-3 py-2 text-md font-medium ${
+                  color === "white" ? "text-white" : "text-black"
+                }  hover:border-b-2 border-primary hover:text-primary`}
+              >
                 <div className="">About Us</div>
-                <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
+                <div className="dropdown-content absolute border hidden bg-white rounded-[26px] ml-[-50px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
                     <li className="mb-2">
                       <Link
@@ -89,9 +104,13 @@ const HeaderMenu = () => {
                   </ul>
                 </div>
               </div>
-              <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+              <div
+                className={`dropdown inline-block relative px-3 py-2 text-md font-medium ${
+                  color === "white" ? "text-white" : "text-black"
+                }  hover:border-b-2 border-primary hover:text-primary`}
+              >
                 <div className="">Media</div>
-                <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
+                <div className="dropdown-content absolute border hidden bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
                     <li className="mb-2">
                       <Link
@@ -112,9 +131,13 @@ const HeaderMenu = () => {
                   </ul>
                 </div>
               </div>
-              <div className="dropdown inline-block relative px-3 py-2 text-md font-medium text-white hover:border-b-2 border-primary hover:text-primary">
+              <div
+                className={`dropdown inline-block relative px-3 py-2 text-md font-medium ${
+                  color === "white" ? "text-white" : "text-black"
+                }  hover:border-b-2 border-primary hover:text-primary`}
+              >
                 <div className="">Contact</div>
-                <div className="dropdown-content absolute hidden bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
+                <div className="dropdown-content absolute hidden border bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
                     <li className="mb-2">
                       <Link
@@ -150,8 +173,19 @@ const HeaderMenu = () => {
               >
                 <span className="absolute -inset-1.5"></span>
                 <span className="sr-only">Open user menu</span>
-
-                <img className="h-7 w-7 rounded-full" src="/lang.svg" alt="" />
+                {color === "white" ? (
+                  <img
+                    className="h-7 w-7 rounded-full"
+                    src="/lang.svg"
+                    alt=""
+                  />
+                ) : (
+                  <img
+                    className="h-7 w-7 rounded-full"
+                    src="/lang_black.svg"
+                    alt=""
+                  />
+                )}
               </button>
             </div>
 
@@ -180,8 +214,15 @@ const HeaderMenu = () => {
           >
             <span className="absolute -inset-1.5"></span>
             <span className="sr-only">Open user menu</span>
-
-            <img className="h-7 w-7 rounded-full " src="/lang.svg" alt="" />
+            {color === "white" ? (
+              <img className="h-7 w-7 rounded-full" src="/lang.svg" alt="" />
+            ) : (
+              <img
+                className="h-7 w-7 rounded-full"
+                src="/lang_black.svg"
+                alt=""
+              />
+            )}
           </button>
           <div
             className={`${
@@ -196,14 +237,20 @@ const HeaderMenu = () => {
         </div>
         <button
           type="button"
-          className="relative inline-flex items-center justify-center rounded-md text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+          className={`relative inline-flex items-center justify-center rounded-md ${
+            color === "white" ? "text-white" : "text-black"
+          }  hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800`}
           aria-controls="mobile-menu"
           aria-expanded="false"
           onClick={() => handleMobileMenu()}
         >
           <span className="absolute -inset-0.5"></span>
           <span className="sr-only">Open main menu</span>
-          <FaBars className="text-2xl" />
+          {type === "mobile" ? (
+            <IoCloseSharp className="text-[32px]" />
+          ) : (
+            <FaBars className="text-2xl" />
+          )}
         </button>
       </div>
     </>

@@ -40,7 +40,7 @@ const Page = () => {
       <div className="h-full relative">
         <div id="section2" className="bg-white text-black whitespace-pre-line">
           <div className=" max-w-[1800px] mx-auto w-full pt-24 pb-24">
-            <div className="flex max-md:flex-col ">
+            <div className="mt-20 flex max-md:flex-col ">
               <div className="w-full ">
                 <div className="text-[70px] leading-[80px] max-md:text-center fontVarelmo uppercase text-black  pb-8 pl-4">
                   FAQ

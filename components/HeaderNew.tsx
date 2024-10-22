@@ -3,7 +3,11 @@ import HeaderMenu from "./common/HeaderMenu";
 import HeaderMobileLogo from "./common/HeaderMobileLogo";
 import MobileMenu from "./common/MobileMenu";
 
-const HeaderNew = () => {
+type props = {
+  type?: string;
+  color?: string;
+};
+const HeaderNew = ({ type }: props) => {
   return (
     <div className=" absolute z-30 w-full flex items-center fontPretendard h-[70px ">
       <nav className=" bg-transparent w-full">
@@ -12,15 +16,15 @@ const HeaderNew = () => {
             <div className="flex items-center">
               <div className={`flex-shrink-0 `}>
                 <div className={`max-md:hidden`}>
-                  <HeaderLogo />
+                  <HeaderLogo type={type} color="white" />
                 </div>
                 <div className={`md:hidden`}>
-                  <HeaderMobileLogo />
+                  <HeaderMobileLogo color="white" />
                 </div>
               </div>
               <div className="hidden md:block"></div>
             </div>
-            <HeaderMenu />
+            <HeaderMenu color="white" />
           </div>
         </div>
         <MobileMenu />

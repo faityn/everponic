@@ -1,5 +1,6 @@
-import HeaderLogoBlack from "./common/HeaderLogoBlack";
-import HeaderMenuBlackD from "./common/HeaderMenuBlackD";
+import HeaderLogo from "./common/HeaderLogo";
+import HeaderMenu from "./common/HeaderMenu";
+import HeaderMobileLogo from "./common/HeaderMobileLogo";
 import MobileMenu from "./common/MobileMenu";
 
 const HeaderWhite = () => {
@@ -11,15 +12,15 @@ const HeaderWhite = () => {
             <div className="flex items-center">
               <div className={`flex-shrink-0 `}>
                 <div className={`max-md:hidden`}>
-                  <HeaderLogoBlack />
+                  <HeaderLogo type="mini" color="black" />
                 </div>
                 <div className={`md:hidden`}>
-                  <HeaderLogoBlack />
+                  <HeaderMobileLogo color="black" />
                 </div>
               </div>
               <div className="hidden md:block"></div>
             </div>
-            <HeaderMenuBlackD />
+            <HeaderMenu color="black" />
           </div>
         </div>
         <MobileMenu />

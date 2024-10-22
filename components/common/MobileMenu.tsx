@@ -2,8 +2,8 @@ import { useRecoilValue } from "recoil";
 import { mobileMenuAtom } from "../atom";
 
 import HeaderMobileLogoBlack from "./HeaderMobileLogoBlack";
-import HeaderMenuBlack from "./HeaderMenuMobileBlack";
 import Link from "next/link";
+import HeaderMenu from "./HeaderMenu";
 
 const MobileMenu = () => {
   const mobileMenu = useRecoilValue(mobileMenuAtom);
@@ -20,7 +20,7 @@ const MobileMenu = () => {
                 </div>
                 <div className="hidden md:block"></div>
               </div>
-              <HeaderMenuBlack />
+              <HeaderMenu type="mobile" color="black" />
             </div>
           </div>
         </nav>
