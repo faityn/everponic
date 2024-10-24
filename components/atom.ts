@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-
+import { FaqType, GalleryType, NewsType } from "./types";
 
 export const loggedInAtom = atom<boolean>({
   key: "logged_in",
@@ -21,3 +21,27 @@ export const mobileMenuAtom = atom<boolean>({
   default: false,
 });
 
+export const totalPageAtom = atom<number>({
+  key: "total_page_atom",
+  default: 1,
+});
+
+export const newsListAtom = atom<NewsType[]>({
+  key: "newsListAtom",
+  default: [],
+});
+
+export const galleryListAtom = atom<GalleryType[]>({
+  key: "galleryListAtom",
+  default: [],
+});
+
+export const faqListAtom = atom<FaqType[]>({
+  key: "faqListAtom",
+  default: [],
+});
+
+export const savedItemAtom = atom({
+  key: "savedItemAtom",
+  default: false,
+});

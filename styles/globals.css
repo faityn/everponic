@@ -292,7 +292,7 @@
         @apply text-[25px] leading-tight mb-4 font-semibold;
     }
     p {
-        @apply leading-[1.8] text-white/60 font-light;
+        @apply leading-[1.8]  font-light;
     }
     .btn,
     .input {
@@ -738,3 +738,14 @@ background-color: #d3294d; */
 .dropdown:hover > .dropdown-content {
     display: block;
 }
+
+.bg-three-color-gradient-3 {
+    background: linear-gradient(
+      to left,
+      /* Define the direction of the gradient */ /* Color 1 */ #ffcc70 5%,
+      #c850c0 50%,
+      /* Color 2 with a specified percentage */ #4158d0 100%,
+      /* Color 3 with another specified percentage */ #b8e1ff
+        /* Optional fourth color to blend to */
+    );
+  }
