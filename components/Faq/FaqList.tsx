@@ -16,6 +16,7 @@ const FaqList = () => {
 
   const getData = async () => {
     const response = await getFaqList(Number(currPage), Number(size));
+    console.log(response);
 
     if (response?.status) {
       setItemsList(response?.result?.responseObject);
@@ -54,7 +55,7 @@ const FaqList = () => {
                   return (
                     <Accordion
                       key={index}
-                      title={String(item?.message)}
+                      title={String(item?.title)}
                       content={String(item?.answer)}
                     />
                   );
