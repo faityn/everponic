@@ -139,18 +139,18 @@ const HeaderMenu = ({ color, type }: props) => {
                 <div className="">Contact</div>
                 <div className="dropdown-content absolute hidden border bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
-                    <li className="mb-2">
+                    {/* <li className="mb-2">
                       <Link
                         className=" bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
                         href="#"
                       >
                         Contact
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="">
                       <Link
                         className="bg-white text-greyText hover:text-primary py-2 px-4 block whitespace-no-wrap"
-                        href="#"
+                        href="/recruit"
                       >
                         Recruit
                       </Link>

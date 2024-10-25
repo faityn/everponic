@@ -110,3 +110,24 @@ export const sendQuestion = async (sendData: QuestionType) => {
     console.error("Error fetching data:", error);
   }
 };
+
+export const getCreersList = async () => {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/careers/list?page=1&limit=20&order=newest`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+      }
+    );
+
+    const data = await response.json();
+
+    return { status: response.ok, result: data };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};

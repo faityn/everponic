@@ -1,11 +1,10 @@
-import FaqList from "@src/components/Faq/FaqList";
-
+import RecruitList from "@src/components/Recruit/RecruitList";
 import SubLayout from "@src/components/SubLayout";
 
 const Page = () => {
   return (
     <SubLayout>
-      <FaqList />
+      <RecruitList />
     </SubLayout>
   );
 };
