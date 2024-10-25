@@ -21,6 +21,28 @@ export const getNewsList = async (page: number, size: number) => {
   }
 };
 
+export const getNewsDetail = async (id: number) => {
+  console.log(id);
+
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/boardInfo/${id}`,
+      {
+        method: "GET",
+        // headers: {
+        //   "Content-Type": "application/json",
+        // },
+        redirect: "follow",
+      }
+    );
+    const data = await response.json();
+
+    return { status: response.ok, result: data };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
 export const getGalleryList = async (page: number, size: number) => {
   try {
     const response = await fetch(

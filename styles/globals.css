@@ -292,7 +292,7 @@
         @apply text-[25px] leading-tight mb-4 font-semibold;
     }
     p {
-        @apply leading-[1.8]  font-light;
+        @apply leading-[1.6]  ;
     }
     .btn,
     .input {
