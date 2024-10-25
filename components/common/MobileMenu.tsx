@@ -114,14 +114,14 @@ const MobileMenu = () => {
                 Contact
               </Link>
 
-              <Link
+              {/* <Link
                 href="#"
                 className="block rounded-md px-3 py-2  text-sm font-normal text-greyText "
               >
                 Contact
-              </Link>
+              </Link> */}
               <Link
-                href="#"
+                href="/recruit"
                 className="block rounded-md px-3 py-2  text-sm font-normal text-greyText "
               >
                 Recruit

@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { FaqType, GalleryType, NewsType } from "./types";
+import { CareersType, FaqType, GalleryType, NewsType } from "./types";
 
 export const loggedInAtom = atom<boolean>({
   key: "logged_in",
@@ -49,4 +49,9 @@ export const faqListAtom = atom<FaqType[]>({
 export const savedItemAtom = atom({
   key: "savedItemAtom",
   default: false,
+});
+
+export const careersListAtom = atom<CareersType[]>({
+  key: "careersListAtom",
+  default: [],
 });
