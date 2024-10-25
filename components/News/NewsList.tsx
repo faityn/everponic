@@ -54,6 +54,7 @@ const NewsList = () => {
               return (
                 <OneItem
                   key={index}
+                  id={item?.id}
                   title={item?.title}
                   subText={`${format(
                     item?.createdAt as string,

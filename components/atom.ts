@@ -31,6 +31,11 @@ export const newsListAtom = atom<NewsType[]>({
   default: [],
 });
 
+export const newsDetailAtom = atom<NewsType[]>({
+  key: "newsDetailAtom",
+  default: [],
+});
+
 export const galleryListAtom = atom<GalleryType[]>({
   key: "galleryListAtom",
   default: [],
