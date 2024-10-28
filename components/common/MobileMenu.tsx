@@ -111,7 +111,7 @@ const MobileMenu = () => {
                 href="#"
                 className="block rounded-md px-3 mb-1 py-2 text-md font-semibold text-[#222222] "
               >
-                Contact
+                Careers
               </Link>
 
               {/* <Link

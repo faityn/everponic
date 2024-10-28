@@ -29,7 +29,7 @@
     "dateformat": "^5.0.3",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
-    "framer-motion": "^10.12.22",
+    "framer-motion": "^11.11.10",
     "i18next": "^23.2.11",
     "intercept-stdout": "^0.1.2",
     "js-cookie": "^3.0.5",

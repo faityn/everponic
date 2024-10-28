@@ -92,8 +92,13 @@ module.exports = {
           "0%, 100%": { transform: "translateY(100%)" },
           "50%": { transform: "translateY(0)" },
         },
+        colorChange: {
+          "0%, 100%": { color: "#767676" }, // gray-800
+          "50%": { color: "#ffffff" }, // blue-500
+        },
       },
       animation: {
+        colorChange: "colorChange 3s ease-in-out infinite",
         "spin-slow": "spin 6s linear infinite",
         linspin: "linspin 1568.2353ms linear infinite",
         easespin: "easespin 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both",

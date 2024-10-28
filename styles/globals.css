@@ -749,3 +749,12 @@ background-color: #d3294d; */
         /* Optional fourth color to blend to */
     );
   }
+
+  .higtText {
+    color: #ffffff;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px white; /* Adjust color and width as needed */
+    color: transparent;
+}
