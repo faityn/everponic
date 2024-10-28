@@ -4,7 +4,8 @@ const GoogleTranslate = () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const [selected, setSelected] = useState<string | null>(null);
-
+//const [, startTransition] = useTransition();
+  //  const localActive = useLocale();
     useEffect(() => {
         const addScript = document.createElement("script");
         addScript.setAttribute(
