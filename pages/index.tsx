@@ -17,8 +17,9 @@ const Home = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [direction, setDirection] = useState<any>("vertical");
   const [autoHeight, setAutoHeight] = useState(true);
-
+  const [activeText, setActiveText] = useState("");
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
+  const sectionRefs = useRef<HTMLDivElement[]>([]);
 
   const slideTo2 = () => {
     if (swiperRef.current) {
@@ -48,6 +49,7 @@ const Home = () => {
     // Call handleResize initially to set the initial screen size
     handleResize();
   }, []);
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const vidRef: any = useRef(null);
 
@@ -55,6 +57,29 @@ const Home = () => {
     vidRef?.current?.play();
   }, []);
 
+  useEffect(() => {
+    // Create IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log(`Current section ID: ${entry.target.id}`);
+            setActiveText(entry.target.id);
+            // Add custom behavior for when the div is in view
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust threshold as needed
+    );
+
+    // Attach observer to each section
+    sectionRefs.current.forEach((section) => observer.observe(section));
+
+    // Clean up observer on component unmount
+    return () => {
+      sectionRefs.current.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
   return (
     <Layout type="main">
       <div id="mainLayout">
@@ -62,7 +87,7 @@ const Home = () => {
           <title>EVERPONIC: Home </title>
           <link ref={ref} href="/favicon.ico" hrefLang="x-default" />
           <link ref={ref} href="/favicon.ico" hrefLang="en" />
-          <link ref={ref} href="/favicon.ico" hrefLang="jp" />
+          <link ref={ref} href="/favicon.ico" hrefLang="ko" />
         </Head>
 
         <Swiper
@@ -106,25 +131,60 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
 
-        <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px]">
+        <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px] relative ">
           <div className="text-[#0081DE] text-center w-full text-[18px] max-sm:text-sm">
             OVERVIEW
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full text-[30px] max-sm:text-xl">
-            <div className="text-white w-full text-center">
-              Hydroponic vertical system maximizes cultivation space to increase
-              yields{" "}
-            </div>
-            <div className="text-greyText w-full text-center">
-              and minimizes water consumption by water cycling system.
-            </div>
-            <div className="text-greyText w-full text-center">
-              By utilizing ICT technology and an automated control system, we
-              are able to{" "}
-            </div>
-            <div className="text-greyText w-full text-center">
-              produce always Fresh plants in an optimized environment.
+          <div className="flex flex-col items-center justify-center w-full text-[30px] max-sm:text-xl relative">
+            <div>
+              <div
+                className={`${
+                  activeText === "text1"
+                    ? "animate-colorChange"
+                    : "text-greyText"
+                }  w-full text-center`}
+              >
+                We provides modular container plant factory capable of{" "}
+              </div>
+              <div
+                className={`${
+                  activeText === "text2"
+                    ? "animate-colorChange"
+                    : "text-greyText"
+                }  w-full text-center`}
+              >
+                producing sustainable fresh crops. Our system is designed for
+                easy{" "}
+              </div>
+              <div
+                className={`${
+                  activeText === "text3"
+                    ? "animate-colorChange"
+                    : "text-greyText"
+                }  w-full text-center`}
+              >
+                operation by users. Furthermore, we enables consumers and
+                businesses to{" "}
+              </div>
+              <div
+                className={`${
+                  activeText === "text4"
+                    ? "animate-colorChange"
+                    : "text-greyText"
+                }  w-full text-center`}
+              >
+                directly receive the fresh vegetables and herbs
+              </div>
+              <div
+                className={`${
+                  activeText === "text5"
+                    ? "animate-colorChange"
+                    : "text-greyText"
+                }  w-full text-center`}
+              >
+                they desire through planned production and cultivation.
+              </div>
             </div>
           </div>
           <div className="text-center max-w-[1496px] m-auto items-center  grid grid-cols-12 justify-center pt-20 ">
@@ -183,13 +243,14 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-[#111111] pt-[100px] pb-[74px] h-full relative">
-          <div className="fontPretendard text-[64px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[80px] text-center">
+          <div className="fontPretendard text-[50px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[64px] text-center">
             We provides{" "}
             <span className="text-white font-medium">
-              <span>One-stop </span> CARE service{" "}
+              <span>one-stop </span> CARE service
             </span>{" "}
+            for customers
             <br />
-            for customers with easy work and <br /> stable profit generation.
+            with easy work and stable profit generation.
           </div>
           <div className="h-full relative min-h-[700px] overflow-hidden">
             <div className="flex flex-col max-w-[1800px] m-auto h-full">
@@ -223,14 +284,45 @@ const Home = () => {
               >
                 <SwiperSlide className="mx-auto min-h-[600px] max-h-[600px] ">
                   <Link href="/plant_factory">
-                    <div className="w-full  ">
+                    <div className="w-full relative ">
                       <div className="text-center items-center flex flex-col  justify-center ">
                         <img
                           className="h-auto w-full rounded-[46px] "
-                          src="/service1.png"
+                          src="/s1.png"
                           alt=""
                         />
-                        <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                      </div>
+                      <div className="absolute w-full h-full m-auto top-0   py-5 ">
+                        <div className="flex w-full pt-16 px-24 justify-between ">
+                          <div className="">
+                            <div className="flex  items-center gap-5">
+                              <img
+                                className="h-[71px] w-[171px]  "
+                                src="/svg/ep.svg"
+                                alt=""
+                              />
+                              <div className="text-[100px] leading-[100px] RobotoBold font-bold">
+                                Plant Factory
+                              </div>
+                            </div>
+
+                            <div className="text-2xl fontPretendard font-medium max-w-[600px] mt-10">
+                              Hydroponic vertical system maximizes cultivation
+                              space to increase yields and minimizes water
+                              consumption by water cycling system.
+                            </div>
+                          </div>
+                          <div className="">
+                            <div className="">
+                              <div className="fontRobotoRegular text-xl text-primary text-right  pr-4">
+                                Our solutions
+                              </div>
+                              <div className="fontPretendard text-stroke font-semibold text-[160px] leading-[160px] text-right ">
+                                01
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </Link>

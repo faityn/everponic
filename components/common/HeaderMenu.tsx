@@ -136,7 +136,7 @@ const HeaderMenu = ({ color, type }: props) => {
                   color === "white" ? "text-white" : "text-black"
                 }  hover:border-b-2 border-primary hover:text-primary`}
               >
-                <div className="">Contact</div>
+                <div className="">Careers</div>
                 <div className="dropdown-content absolute hidden border bg-white rounded-[26px] ml-[-60px] w-[170px]  mt-3 py-4 px-2">
                   <ul className="  rounded-3xl ">
                     {/* <li className="mb-2">
