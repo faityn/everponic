@@ -13,23 +13,27 @@ import Link from "next/link";
 import ActionButtonWhite from "@src/components/common/ActionButtonWhite";
 import Layout from "@src/components/Layout";
 import { useTranslation } from "next-i18next";
+import FadeText from "@src/components/common/FadeText";
+import getLang from "@src/helper/getLang";
+import FadeTextKo from "@src/components/common/FadeTextKo";
+
 const Home = () => {
-  //const { t } = useTranslation("common");
+  const activeLang = getLang();
   const { t } = useTranslation("common");
   const ref = useRef(null);
   const swiperRef = useRef<SwiperCore>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [direction, setDirection] = useState<any>("vertical");
   const [autoHeight, setAutoHeight] = useState(true);
-  const [activeText, setActiveText] = useState("");
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 });
-  const sectionRefs = useRef<HTMLDivElement[]>([]);
+  const [lang, setLang] = useState("");
 
   const slideTo2 = () => {
     if (swiperRef.current) {
       swiperRef.current.slideTo(0); // Jump to the first slide (index 0)
     }
   };
+
   useEffect(() => {
     if (screenSize?.width < 500) {
       setDirection("horizontal");
@@ -62,28 +66,9 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // Create IntersectionObserver
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log(`Current section ID: ${entry.target.id}`);
-            setActiveText(entry.target.id);
-            // Add custom behavior for when the div is in view
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust threshold as needed
-    );
+    setLang(activeLang);
+  }, [activeLang]);
 
-    // Attach observer to each section
-    sectionRefs.current.forEach((section) => observer.observe(section));
-
-    // Clean up observer on component unmount
-    return () => {
-      sectionRefs.current.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
   return (
     <Layout type="main">
       <div id="mainLayout">
@@ -135,60 +120,18 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
 
-        <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px] relative ">
+        <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px] relative notranslate">
           <div className="text-[#0081DE] text-center w-full text-[18px] max-sm:text-sm notranslate">
-            OVERVIEW
+            WHO WE ARE
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full text-[30px] max-sm:text-xl relative">
-            <div>
-              <div
-                className={`${
-                  activeText === "text1"
-                    ? "animate-colorChange"
-                    : "text-greyText"
-                }  w-full text-center`}
-              >
-                We provides modular container plant factory capable of{" "}
-              </div>
-              <div
-                className={`${
-                  activeText === "text2"
-                    ? "animate-colorChange"
-                    : "text-greyText"
-                }  w-full text-center`}
-              >
-                producing sustainable fresh crops. Our system is designed for
-                easy{" "}
-              </div>
-              <div
-                className={`${
-                  activeText === "text3"
-                    ? "animate-colorChange"
-                    : "text-greyText"
-                }  w-full text-center`}
-              >
-                operation by users. Furthermore, we enables consumers and
-                businesses to{" "}
-              </div>
-              <div
-                className={`${
-                  activeText === "text4"
-                    ? "animate-colorChange"
-                    : "text-greyText"
-                }  w-full text-center`}
-              >
-                directly receive the fresh vegetables and herbs
-              </div>
-              <div
-                className={`${
-                  activeText === "text5"
-                    ? "animate-colorChange"
-                    : "text-greyText"
-                }  w-full text-center`}
-              >
-                they desire through planned production and cultivation.
-              </div>
+          <div className=" w-full text-[30px] max-sm:text-xl relative notranslate ">
+            {/* {lang} */}
+            <div className={`${lang === "kr" ? "" : "hidden"}`}>
+              <FadeTextKo />
+            </div>
+            <div className={`${lang === "en" ? "" : "hidden"}`}>
+              <FadeText />
             </div>
           </div>
           <div className="text-center max-w-[1496px] m-auto items-center  grid grid-cols-12 justify-center pt-20 ">
@@ -211,7 +154,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="whitespace-pre-line notranslate">
           <div className="text-center  ">
             <div className="relative flex justify-center items-center ">
               <video
@@ -233,8 +176,7 @@ const Home = () => {
                   <div
                     className={`fontPretendard lg:text-[64px]  text-white font-medium leading-[80px] `}
                   >
-                    We’ve shortened the supply chain. <br />
-                    Now you decide what grow.
+                    {t("middle_video_text")}
                   </div>
                   <div className="mt-10">
                     <Link href="#">
@@ -246,8 +188,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#111111] pt-[100px] pb-[74px] h-full relative whitespace-pre-line">
-          <div className="fontPretendard text-[50px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[64px] text-center">
+        <div className="bg-[#111111] pt-[80px] pb-[60px] h-full relative whitespace-pre-line notranslate">
+          <div className="fontPretendard text-[40px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[54px] text-center">
             We provides{" "}
             <span className="text-white font-medium">
               <span>one-stop </span> CARE service
@@ -678,9 +620,10 @@ const Home = () => {
 
 export default Home;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? "en", ["common"])),
+    ...(await serverSideTranslations(locale === "kr" ? "kr" : "en", [
+      "common",
+    ])),
   },
 });

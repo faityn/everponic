@@ -5,72 +5,72 @@ import Carousel from "react-multi-carousel";
 import Section5Item from "@src/components/Produce/Section5Item";
 import Section4Item from "@src/components/Produce/Section4Item";
 import Layout from "@src/components/Layout";
+import { useTranslation } from "next-i18next";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Page = () => {
+  const { t } = useTranslation("common");
+
   const BannerInfo = {
     title: "PRODUCE",
-    text:
-      "Our automation technology and advance hydroponic\ngrowing techniques guarantee consistent,\n",
-    white_text: "tasty and nutritious harvests.",
+    text: `${t("produce_banner_text")}`,
+
     img: "/images/b2.png",
   };
   const itemList = [
     {
-      title: "Producing Hydroponically",
-      subText:
-        "Hydroponics is a growing method that replaces soil with a water mixture that delivers the nutrients plants need directly to their roots. It allows for more precise control over the growing process.",
+      title: `${t("produce_section_3_title_1")}`,
+      subText: `${t("produce_section_3_text_1")}`,
     },
     {
-      title: "Non-Seasonal Local Food Supply",
-      subText:
-        "Since we grow inside clean and controlled environments, we are able to grow 365 days, all year-round. No more seasons!",
+      title: `${t("produce_section_3_title_2")}`,
+      subText: `${t("produce_section_3_text_2")}`,
     },
     {
-      title: "Product Consistency",
-      subText:
-        "One key benefit is having product consistency from a quality stand point. ",
+      title: `${t("produce_section_3_title_3")}`,
+      subText: `${t("produce_section_3_text_3")}`,
     },
     {
-      title: "Climate Friendly",
-      subText:
-        "Our method allows us to use 90% less water, less land, and less waste than traditional soil farms.",
+      title: `${t("produce_section_3_title_4")}`,
+      subText: `${t("produce_section_3_text_4")}`,
     },
   ];
 
   const section5itemList = [
     {
-      title: "Green Butter",
+      title: `${t("crop_type_1")}`,
       image: "/images/g1.png",
     },
     {
-      title: "Red Butter",
+      title: `${t("crop_type_2")}`,
       image: "/images/g2.png",
     },
     {
-      title: "Red Oakleaf",
+      title: `${t("crop_type_3")}`,
       image: "/images/g3.png",
     },
     {
-      title: "Green Oakleaf",
+      title: `${t("crop_type_4")}`,
       image: "/images/g4.png",
     },
     {
-      title: "Green Frilly",
+      title: `${t("crop_type_5")}`,
       image: "/images/g5.png",
     },
     {
-      title: "Red Coral",
+      title: `${t("crop_type_6")}`,
       image: "/images/g6.png",
     },
     {
-      title: "Bulls Blood",
+      title: `${t("crop_type_7")}`,
       image: "/images/g7.png",
     },
     {
-      title: "Bulls Blood",
+      title: `${t("crop_type_8")}`,
       image: "/images/g8.png",
     },
     {
-      title: "Bulls Blood",
+      title: `${t("crop_type_9")}`,
       image: "/images/g9.png",
     },
   ];
@@ -112,7 +112,7 @@ const Page = () => {
   };
   return (
     <Layout>
-      <div className="h-full relative">
+      <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner info={BannerInfo} />
 
         <div id="section2" className="bg-white">
@@ -120,13 +120,12 @@ const Page = () => {
             <div className="flex max-md:flex-col gap-5">
               <div className="w-full ">
                 <p className="text-[48px] leading-[57px] max-w-[648px] max-md:max-w-[358px] max-md:mx-auto font-semibold text-black max-md:text-center max-md:text-[32px] max-md:leading-[38px]">
-                  Producing premium quality, sustainable and tasty
+                  {t("produce_title_1")}
                 </p>
               </div>
               <div className="w-full flex justify-end max-md:justify-center pt-5">
                 <p className="max-w-[456px] max-md:max-w-[358px] text-xl text-[#353644] font-normal max-md:text-center">
-                  Our vertical hydroponic system produces leafy greens and herbs
-                  in a controlled environment with the following benefits:
+                  {t("produce_title_2")}
                 </p>
               </div>
             </div>
@@ -144,7 +143,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Year-round Supply
+                    {t("produce_icon_1")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center border-b sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -158,7 +157,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Low Inputs
+                    {t("produce_icon_2")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center border-b border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -172,7 +171,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Small Footprint
+                    {t("produce_icon_3")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center border-b sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -186,7 +185,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Less Distance to Market
+                    {t("produce_icon_4")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center border-b max-sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -200,7 +199,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Minimal Waste
+                    {t("produce_icon_5")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center sm:border-r max-sm:border-b border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -214,7 +213,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Higher yield per m2
+                    {t("produce_icon_6")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center  border-r max-sm:border-b border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -228,7 +227,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Consistent superior quality
+                    {t("produce_icon_7")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center max-sm:border-b sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -242,7 +241,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Real-time data
+                    {t("produce_icon_8")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center  border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -256,7 +255,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Automated Operations
+                    {t("produce_icon_9")}
                   </div>
                 </div>
                 <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center   border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
@@ -270,7 +269,7 @@ const Page = () => {
                     priority={true}
                   />{" "}
                   <div className="text-[#353644] text-xl max-xl:text-md max-md:text-sm max-sm:text-md font-semibold text-center">
-                    Zero Environmental Impact
+                    {t("produce_icon_10")}
                   </div>
                 </div>
                 {/* {itemList3?.map((item, index) => {
@@ -290,12 +289,8 @@ const Page = () => {
 
         <div id="section3" className="bg-[#111111]  relative ">
           <div className=" h-full w-full max-w-[1800px] mx-auto top-0  pb-20">
-            <div className="w-full text-greyText max-w-[976px] text-[48px] fontRobotoMedium py-16 leading-[62px]">
-              Our{" "}
-              <span className="text-white">
-                automation technology and advance hydroponic growing techniques
-              </span>{" "}
-              guarantee consistent, tasty and nutritious harvests
+            <div className="w-full text-[#cccccc] max-w-[976px] text-[38px] fontRobotoMedium py-16 leading-[52px]">
+              {t("produce_title_3")}
             </div>
             <div className="h-full w-full flex max-md:flex-col gap-6 items-center justify-center ">
               <div className=" ">
@@ -343,12 +338,10 @@ const Page = () => {
           <div className=" w-full max-w-[1800px] mx-auto  pb-20 ">
             <div className="text-center text-[#232324] py-28">
               <div className="text-[32px] fontRobotoMedium font-semibold mb-3">
-                Variety of Crop types
+                {t("produce_section_5_title_1")}
               </div>
               <div className="text-[20px] fontRobotoMedium font-medium">
-                Over 120 crops can be produced, including leafy vegetables,
-                herbs,
-                <br /> flowers, strawberry and sprouts, and specialty crops.
+                {t("produce_section_5_text_1")}
               </div>
             </div>
 
@@ -384,3 +377,11 @@ const Page = () => {
 };
 
 export default Page;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale === "kr" ? "kr" : "en", [
+      "common",
+    ])),
+  },
+});

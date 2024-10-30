@@ -42,18 +42,7 @@ const PageBanner = ({ info }: props) => {
         </div>
 
         <div className="text-center max-w-[1030px] text-[30px] leading-[48px] max-xl:text-[26px] max-xl:leading-[40px] max-sm:text-xl text-[#cccccc] fontPretendard font-normal">
-          {info.white_text_type === "start" ? (
-            <div>
-              <span className="text-white font-medium">{info.white_text}</span>{" "}
-              {info.text}
-            </div>
-          ) : (
-            <div>
-              {" "}
-              {info.text}
-              <span className="text-white font-medium">{info.white_text}</span>
-            </div>
-          )}
+          <div>{info.text}</div>
         </div>
         <div className="absolute right-10 bottom-10 max-lg:hidden">
           <Link href="#">

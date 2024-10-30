@@ -1,28 +1,32 @@
 import PageBanner2 from "@src/components/Banner/PageBanner2";
 import ActionButton from "@src/components/common/ActionButton";
 import Layout from "@src/components/Layout";
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const Page = () => {
+  const { t } = useTranslation("common");
   const BannerInfo = {
     title: "MODULAR CONTAINER\nPLANT FACTORY",
-    text:
-      "Is designed to enable the production  of always\nFRESH plants accessible to",
-    white_text: "“anyone, anytime, anywhere”.",
+    text: `${t("who_we_are_banner_text")}`,
 
     img: "/images/b5.png",
   };
 
   return (
     <Layout>
-      <div className="h-full relative">
+      <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner2 info={BannerInfo} />
         <div id="section2" className="bg-white text-black whitespace-pre-line">
           <div className=" max-w-[1800px] mx-auto w-full pt-24 pb-24">
             <div className="flex  max-lg:flex-col-reverse">
               <div className="w-full pr-10">
-                <div className="text-[70px] leading-[78px] max-w-[729px] max-lg:text-center">
-                  The future business starts here; we grow with you.
+                <div className="text-[40px] leading-[48px] max-w-[729px] max-lg:text-center">
+                  The future business starts here;
+                  <br />
+                  We grow with you.
                 </div>
 
                 <div className="flex justify-end max-lg:justify-center max-w-[729px] mt-16 lg:pr-36">
@@ -34,54 +38,42 @@ const Page = () => {
               <div className="w-full">
                 <div className="flex max-md:flex-col w-full border-b-2 border-dashed border-[#353644] pb-14">
                   <div className="min-w-[167px] max-md:mb-5 text-2xl font-semibold text-primary">
-                    Value
+                    {t("mission_section_1_title_1")}
                   </div>
                   <div className="w-full">
                     <div className="text-xl font-medium text-[#232324] mb-3">
-                      Stewardship and Sustainability
+                      {t("mission_section_1_subtitle_1")}
                     </div>
                     <div className="text-xl text-greyText font-normal max-w-[584px]">
-                      We embrace responsible stewardship of the land,
-                      safeguarding it like a small island amidst challenging
-                      conditions. Our commitment lies in nurturing plants even
-                      in desert-like environments, optimizing water usage, and
-                      minimizing our ecological footprint.
+                      {t("mission_section_1_text_1")}
                     </div>
                   </div>
                 </div>
 
                 <div className="flex max-md:flex-col w-full border-b-2 border-dashed border-[#353644] py-14">
                   <div className="min-w-[167px]  max-md:mb-5 text-2xl font-semibold text-primary">
-                    Mission
+                    {t("mission_section_1_title_2")}
                   </div>
                   <div className="w-full">
                     <div className="text-xl font-medium text-[#232324] mb-3">
-                      Empowering Growth
+                      {t("mission_section_1_subtitle_2")}
                     </div>
                     <div className="text-xl text-greyText font-normal max-w-[584px]">
-                      Our mission is to empower farmers and communities by
-                      providing an innovative modular container plant factory.
-                      We strive to cultivate nutritious crops sustainably, even
-                      in challenging climates and water-scarce conditions such
-                      as small islands and arid deserts.
+                      {t("mission_section_1_text_2")}
                     </div>
                   </div>
                 </div>
 
                 <div className="flex max-md:flex-col w-full  py-14">
                   <div className="min-w-[167px] max-md:mb-5 text-2xl font-semibold text-primary">
-                    Vision
+                    {t("mission_section_1_title_3")}
                   </div>
                   <div className="w-full">
                     <div className="text-xl font-medium text-[#232324] mb-3">
-                      From Desert to Oasis
+                      {t("mission_section_1_subtitle_3")}
                     </div>
                     <div className="text-xl text-greyText font-normal max-w-[584px]">
-                      We envision transforming barren spaces into thriving
-                      oases. Through cutting-edge technology, efficient
-                      practices, and a commitment to sustainability, we aim to
-                      create lush, productive environments where plants
-                      flourish, even against the odds.
+                      {t("mission_section_1_text_3")}
                     </div>
                   </div>
                 </div>
@@ -95,3 +87,11 @@ const Page = () => {
 };
 
 export default Page;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale === "kr" ? "kr" : "en", [
+      "common",
+    ])),
+  },
+});

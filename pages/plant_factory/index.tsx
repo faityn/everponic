@@ -3,100 +3,109 @@ import Layout from "@src/components/Layout";
 import SectionOneItem from "@src/components/PlantFactory/SectionOneItem";
 import SectionThreeItem from "@src/components/PlantFactory/SectionThreeItem";
 import SectionTwoItem from "@src/components/PlantFactory/SectionTwoItem";
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const BannerInfo = {
   title: "PLANT FACTORY",
   text:
-    "Hydroponic vertical system maximizes cultivation space  to increase yields and minimizes water consumption by water cycling system.\nBy utilizing ICT technology and an automated control  system, we are able to produce always",
-  white_text: "Fresh plants in an optimized environment.",
+    "Hydroponic vertical system maximizes cultivation space  to increase yields and minimizes water consumption by water cycling system.\n By utilizing ICT technology and an automated control system, we are able to\n produce always Fresh plants in an optimized environment.",
+
   img: "/images/p1.png",
 };
 
-const itemList = [
-  {
-    title: "Dimensions",
-    subText: ["2.438M x 12.192M x 2.896M", "3M x 8.5M x 3M"],
-    img: "/images/a11.gif",
-  },
-  {
-    title: "Weight",
-    subText: ["4 ~ 6 Ton"],
-    img: "/images/a22.gif",
-  },
-  {
-    title: "Power Usage",
-    subText: ["100 ~ 200 kWh/day (avg.)"],
-    img: "/images/a33.gif",
-  },
-  {
-    title: "Water Usage",
-    subText: ["200 ~ 400 liter/month (avg.)"],
-    img: "/images/a44.gif",
-  },
-];
+const BannerInfoKo = {
+  title: "PLANT FACTORY",
+  text:
+    "수경 수직 시스템은 수확량을 늘리기 위해 재배 공간을 극대화하고\n 물 순환 시스템으로 물 소비를 최소화합니다.\n ICT 기술과 자동 제어 시스템을 활용하여 최적화된 환경에서\n 항상 신선한 식물을 생산할 수 있습니다. ",
+  img: "/images/p1.png",
+};
 
-const itemList2 = [
-  {
-    title: "Stacked container ",
-    subText: "(~105m2)",
-    img: "/images/p5.png",
-  },
-  {
-    title: "Central Workstation ",
-    subText: "(~330m2)",
-    img: "/images/p6.png",
-  },
-  {
-    title: "Scalable Operation ",
-    subText: "(~158m2)",
-    img: "/images/p7.png",
-  },
-];
-
-const itemList3 = [
-  {
-    title: "Easy Control",
-    subText:
-      "Easy to use and manage multiple devices (PH&EC concentration controller, Ventilation fan, LED, Temperature, Humidity, Watering system) that will enable you to automate your cultivation with a few simple clicks, anytime/anywhere.",
-    img: "/images/a5.gif",
-  },
-  {
-    title: "Year-Round Production",
-    subText:
-      "Our system allows for the cultivation of a variety of fresh crops throughout the year in a container that is independent of external conditions, regardless of geographical location and external climate conditions.",
-    img: "/images/a6.gif",
-  },
-  {
-    title: "Minimal Water Usage",
-    subText:
-      "Water cycling system can reduce water usage by more than 90% compared to conventional farming methods.",
-    img: "/images/a7.gif",
-  },
-  {
-    title: "Work Efficiency",
-    subText:
-      "Vertical growing tower allows workers at ground level to access and care for crops at all heights, eliminating the need for a scissor lift. Also, crop choices can be expanded.",
-    img: "/images/a8.gif",
-  },
-  {
-    title: "Less pesticides",
-    subText:
-      "All produce is grown without the use of pesticides, herbicides or synthetic fertilizers.",
-    img: "/images/a9.gif",
-  },
-  {
-    title: "High Quality & Yields",
-    subText:
-      "Possible to produce high quality & yields of plants annually in a container, which is equivalent to the effect of more than about 4,000 ft2 (100평) of traditional open field farming. This maximizes space efficiency.",
-    img: "/images/a10.gif",
-  },
-];
 const Page = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const { t } = useTranslation("common");
+
+  const itemList = [
+    {
+      title: `${t("Dimensions")}`,
+      subText: ["2.438M x 12.192M x 2.896M", "3M x 8.5M x 3M"],
+      img: "/images/a11.gif",
+    },
+    {
+      title: `${t("Weight")}`,
+      subText: ["4 ~ 6 Ton"],
+      img: "/images/a22.gif",
+    },
+    {
+      title: `${t("Power Usage")}`,
+      subText: ["100 ~ 200 kWh/day (avg.)"],
+      img: "/images/a33.gif",
+    },
+    {
+      title: `${t("Water Usage")}`,
+      subText: ["200 ~ 400 liter/month (avg.)"],
+      img: "/images/a44.gif",
+    },
+  ];
+
+  const itemList2 = [
+    {
+      title: "Stacked container ",
+      subText: "(105m2)",
+      img: "/images/p5.png",
+    },
+    {
+      title: "Scalable Operation ",
+      subText: "(158m2)",
+      img: "/images/p6.png",
+    },
+    {
+      title: "Central Workstation ",
+      subText: "(330m2)",
+      img: "/images/p7.png",
+    },
+  ];
+
+  const itemList3 = [
+    {
+      title: "Easy Control",
+      subText: `${t("Easy Control Text")}`,
+      img: "/images/a5.gif",
+    },
+    {
+      title: "Year-Round Production",
+      subText: `${t("Year-Round Production Text")}`,
+      img: "/images/a6.gif",
+    },
+    {
+      title: "Minimal Water Usage",
+      subText: `${t("Minimal Water Usage Text")}`,
+      img: "/images/a7.gif",
+    },
+    {
+      title: "Work Efficiency",
+      subText: `${t("Work Efficiency Text")}`,
+      img: "/images/a8.gif",
+    },
+    {
+      title: "Less pesticides",
+      subText: `${t("Less Pesticides Text")}`,
+      img: "/images/a9.gif",
+    },
+    {
+      title: "High Quality & Yields",
+      subText: `${t("High Quality & Yields Text")}`,
+      img: "/images/a10.gif",
+    },
+  ];
   return (
     <Layout>
-      <div className="h-full relative">
-        <PageBanner info={BannerInfo} />
+      <div className="h-full relative notranslate whitespace-pre-line">
+        <PageBanner info={locale === "en" ? BannerInfo : BannerInfoKo} />
 
         <div className="   flex w-full max-md:flex-col">
           {itemList?.map((item, index) => {
@@ -152,37 +161,33 @@ const Page = () => {
           <div className="flex pb-20 max-lg:flex-col">
             <div className="max-w-[800px] w-full max-lg:max-w-full">
               <div className="text-black text-[48px] leading-[57px] max-md:text-[32px] max-md:leading-[38px] font-semibold max-lg:text-center mb-5">
-                Modular Hydroponic <br />
-                Vertical Container
+                {t("Modular Hydroponic Vertical Container")}
               </div>
             </div>
             <div className="w-full ">
               <div className="flex gap-3 max-md:flex-col">
                 <div className="w-full ">
-                  <div className="text-xl text-black mb-3 max-md:text-center">
-                    (Environmental Control)
+                  <div className="text-xl text-black mb-3 max-md:text-center font-semibold">
+                    {t("Environmental Control")}
                   </div>
                   <div className="max-w-[280px] text-lg leading-[25px] text-greyText max-md:mx-auto max-md:text-center">
-                    Independent environment from external factors (Easy
-                    environment control & Energy saving)
+                    {t("Modular_text_1")}
                   </div>
                 </div>
                 <div className="w-full ">
-                  <div className="text-xl text-black mb-3 max-md:text-center">
-                    (Space Efficiency)
+                  <div className="text-xl text-black mb-3 max-md:text-center font-semibold">
+                    {t("Space Efficiency")}
                   </div>
                   <div className="max-w-[280px] text-lg leading-[25px] text-greyText max-md:mx-auto max-md:text-center">
-                    Multi-layer stacking enables maximum space utilization and
-                    Easy assembly & disassembly (Easy Scale up and down)
+                    {t("Modular_text_2")}
                   </div>
                 </div>
                 <div className="w-full ">
-                  <div className="text-xl text-black mb-3 max-md:text-center">
-                    (Other Features)
+                  <div className="text-xl text-black mb-3 max-md:text-center font-semibold">
+                    {t("Other Features")}
                   </div>
                   <div className="max-w-[280px] text-lg leading-[25px] text-greyText max-md:mx-auto max-md:text-center">
-                    Strong and durable container (no risk of breakage & easy to
-                    move)
+                    {t("Modular_text_3")}
                   </div>
                 </div>
               </div>
@@ -209,7 +214,7 @@ const Page = () => {
             <div className="flex max-md:flex-col">
               <div className="w-full ">
                 <p className="text-[48px] leading-[57px] max-w-[648px] max-md:max-w-[358px] max-md:mx-auto font-medium text-[#cccccc] max-md:text-center max-md:text-[32px] max-md:leading-[38px]">
-                  Modular Hydroponic Vertical Container
+                  {t("Modular Hydroponic Vertical Container")}
                 </p>
               </div>
               <div className="w-full flex justify-end max-md:justify-center pt-5">
@@ -244,3 +249,11 @@ const Page = () => {
 };
 
 export default Page;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale === "kr" ? "kr" : "en", [
+      "common",
+    ])),
+  },
+});

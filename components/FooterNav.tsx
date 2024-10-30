@@ -1,17 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Nav = () => {
+  const { t } = useTranslation("common");
   return (
     <nav
-      className={`flex flex-col border-t border-[#1D1D1D] px-5 pt-[90px] h-max bottom-0 mt-auto z-10 top-0 w-full bg-[#111111] fontPretendard`}
+      className={`flex flex-col border-t border-[#1D1D1D] px-5 pt-[90px] h-max bottom-0 mt-auto z-10 top-0 w-full bg-[#111111] fontPretendard notranslate`}
     >
       <div className="flex max-lg:flex-col items-start max-w-[1800px] w-full gap-5 m-auto h-full pb-[60px] ">
         <div className="w-full flex max-lg:justify-center max-sm:px-5">
           <Image
             src="/svg/logo_footer_white.svg"
             alt="basket"
-            className=" h-auto w-[366px]  rounded-lg"
+            className=" h-auto w-[366px]  "
             width="366"
             height="56"
             unoptimized={true}
@@ -49,19 +51,19 @@ const Nav = () => {
                 className={` relative flex font-normal items-center group hover:text-primary transition-all duration-300 text-[#BABABA] mb-1`}
                 href="/who_we_are"
               >
-                Who we are
+                {t("Who we are")}
               </Link>
               <Link
                 className={` relative flex font-normal items-center group hover:text-primary transition-all duration-300 text-[#BABABA] mb-1`}
                 href="/mission_vision"
               >
-                Mission & Vision
+                {t("Mission_Vision")}
               </Link>
               <Link
                 className={` relative flex font-normal items-center group hover:text-primary transition-all duration-300 text-[#BABABA] mb-1`}
                 href="/partners"
               >
-                Partner
+                {t("Partner")}
               </Link>
             </div>
           </div>
@@ -84,7 +86,7 @@ const Nav = () => {
             <div className="min-w-[250px] max-lg:min-w-[200px] max-md:w-full fontPretendard">
               <div className="text-md mb-3">Contact</div>
               <div className="text-md mb-3  font-normal text-[#BABABA]">
-                Phone: +86 010 8189 0920
+                Phone: +82 010 8189 0920
               </div>
               <div className="text-md mb-3 font-normal text-[#BABABA]">
                 E-mail: everponic@gmail.com

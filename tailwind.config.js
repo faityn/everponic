@@ -96,8 +96,13 @@ module.exports = {
           "0%, 100%": { color: "#767676" }, // gray-800
           "50%": { color: "#ffffff" }, // blue-500
         },
+        gradientMove: {
+          "0%": { backgroundPosition: "0% 0%" },
+          "100%": { backgroundPosition: "0% 100%" },
+        },
       },
       animation: {
+        "gradient-vertical": "gradientMove 5s ease infinite",
         colorChange: "colorChange 3s ease-in-out infinite",
         "spin-slow": "spin 6s linear infinite",
         linspin: "linspin 1568.2353ms linear infinite",
