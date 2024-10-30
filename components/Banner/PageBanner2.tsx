@@ -35,7 +35,7 @@ const PageBanner2 = ({ info }: props) => {
         <div className="absolute right-10 bottom-10 max-lg:hidden">
           <Link href="#">
             <Image
-              src="/images/learn_more.png"
+              src="/images/learn_more.gif"
               alt="learn_more"
               className="max-w-[100px] max-h-[100px] object-cover object-center w-full "
               width="109"
