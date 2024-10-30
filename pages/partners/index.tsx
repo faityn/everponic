@@ -29,8 +29,6 @@ const Page = () => {
               <div className="mb-10">{t("PARTNERS_text_1")}</div>
               <div className="">{t("PARTNERS_text_2")}</div>
             </div>
-
-            <div className="relative mt-10"></div>
           </div>
 
           <div className="pb-20">

@@ -11,7 +11,7 @@
     "Weight": "무게",
     "Power Usage": "전력 사용량",
     "Water Usage": "물 사용량",
-    "Modular Hydroponic Vertical Container": "모듈형 수경\n 수직 컨테이너",
+    "Modular Hydroponic Vertical Container": "모듈형 수경 수직\n 컨테이너",
     "Environmental Control": "환경제어",
     "Space Efficiency": "공간 효율성",
     "Other Features": "기타 기능",
@@ -78,5 +78,12 @@
     "PARTNERS_text_1": "파트너는 우리의 솔루션과 역량을 보완하는 사업 아이디어, 인력, 금융, 제품 및 서비스를 제공하는 미래 지향적 협력자입니다. ",
     "PARTNERS_text_2": "우리와의 긴밀한 협력을 통해 모듈형 컨테이너 플랜트 공장을 전 세계적으로 확장하는 데 동참해 주세요.",
     "careers_text_1": "언제든지 지원하세요. 귀하의 지원서를 검토한 후 답변드리겠습니다. ",
+    "home_section_4_title": "우리는 고객의 쉽고 안정적인 수익 창출을 위한\n 원스톱 케어 서비스를 제공합니다.",
+    "factory_icon_subtext_2": "4 ~ 6 톤",
+    "factory_icon_subtext_3": "100 ~ 200 kWh/일(평균)",
+    "factory_icon_subtext_4": "200 ~ 400 리터/월(평균)",
+    "factory_section_3_subtext_1": "32평",
+    "factory_section_3_subtext_2": "48평",
+    "factory_section_3_subtext_3": "100평",
     "end": "end"
 }
