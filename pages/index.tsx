@@ -110,7 +110,7 @@ const Home = () => {
                   className="w-full h-screen max-sm:h-[500px] object-cover "
                 >
                   <source
-                    src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1728718147/hrfp4mt0adrsor92aw4r.mp4"
+                    src="https://res.cloudinary.com/do5useihi/video/upload/v1730280284/Comp_1_h2vsf1.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -189,14 +189,8 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-[#111111] pt-[80px] pb-[60px] h-full relative whitespace-pre-line notranslate">
-          <div className="fontPretendard text-[40px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[54px] text-center">
-            We provides{" "}
-            <span className="text-white font-medium">
-              <span>one-stop </span> CARE service
-            </span>{" "}
-            for customers
-            <br />
-            with easy work and stable profit generation.
+          <div className="fontPretendard text-[40px] max-md:text-[32px] max-md:leading-[48px]  text-white font-light mt-20 mb-40 leading-[54px] text-center">
+            {t("home_section_4_title")}
           </div>
           <div className="h-full relative min-h-[700px] overflow-hidden">
             <div className="flex flex-col max-w-[1800px] m-auto h-full">
@@ -409,7 +403,7 @@ const Home = () => {
                             />
                           </div>
                           <div className="absolute w-full h-full m-auto top-0   py-5 ">
-                            <div className="flex items-center justify-center text-center w-full h-full pt-16 px-24 text-[70px]  leading-[88px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px]">
+                            <div className="flex items-center justify-center text-center w-full h-full pt-16 px-24 text-[50px]  leading-[68px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px]">
                               {t("solution_4_text")}
                               {/* The future business starts
                             <br /> here, we grow with you. */}

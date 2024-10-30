@@ -37,17 +37,17 @@ const Page = () => {
     },
     {
       title: `${t("Weight")}`,
-      subText: ["4 ~ 6 Ton"],
+      subText: [`${t("factory_icon_subtext_2")}`],
       img: "/images/a22.gif",
     },
     {
       title: `${t("Power Usage")}`,
-      subText: ["100 ~ 200 kWh/day (avg.)"],
+      subText: [`${t("factory_icon_subtext_3")}`],
       img: "/images/a33.gif",
     },
     {
       title: `${t("Water Usage")}`,
-      subText: ["200 ~ 400 liter/month (avg.)"],
+      subText: [`${t("factory_icon_subtext_4")}`],
       img: "/images/a44.gif",
     },
   ];
@@ -55,17 +55,17 @@ const Page = () => {
   const itemList2 = [
     {
       title: "Stacked container ",
-      subText: "(105m2)",
+      subText: `${t("factory_section_3_subtext_1")}`,
       img: "/images/p5.png",
     },
     {
       title: "Scalable Operation ",
-      subText: "(158m2)",
+      subText: `${t("factory_section_3_subtext_2")}`,
       img: "/images/p6.png",
     },
     {
       title: "Central Workstation ",
-      subText: "(330m2)",
+      subText: `${t("factory_section_3_subtext_3")}`,
       img: "/images/p7.png",
     },
   ];

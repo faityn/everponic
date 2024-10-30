@@ -41,6 +41,11 @@ export const galleryListAtom = atom<GalleryType[]>({
   default: [],
 });
 
+export const galleryDetailAtom = atom<GalleryType[]>({
+  key: "galleryDetailAtom",
+  default: [],
+});
+
 export const faqListAtom = atom<FaqType[]>({
   key: "faqListAtom",
   default: [],
