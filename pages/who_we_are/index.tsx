@@ -18,7 +18,7 @@ const Page = () => {
     <Layout>
       <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner2 info={BannerInfo} />
-        <div id="section2" className="bg-white text-black whitespace-pre-line">
+        <div id="session_" className="bg-white text-black whitespace-pre-line">
           <div className=" max-w-[1800px] mx-auto w-full pt-24 pb-24">
             <div className="text-[48px] fontPretendard font-semibold uppercase text-black text-center pb-8">
               WHO WE ARE

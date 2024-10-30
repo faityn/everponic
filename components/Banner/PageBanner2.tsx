@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { bannerInfoType } from "../types";
-import Link from "next/link";
 
 type props = {
   info: bannerInfoType;
 };
 const PageBanner2 = ({ info }: props) => {
+  const scrollToSection = () => {
+    const section = document.getElementById("session_");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className=" w-full h-full min-h-[500px] relative rounded-b-[34px] whitespace-pre-line">
       {info.img ? (
@@ -33,7 +38,7 @@ const PageBanner2 = ({ info }: props) => {
           <div> {info.text} </div>
         </div>
         <div className="absolute right-10 bottom-10 max-lg:hidden">
-          <Link href="#">
+          <div onClick={scrollToSection} className="cursor-pointer">
             <Image
               src="/images/learn_more.gif"
               alt="learn_more"
@@ -43,7 +48,7 @@ const PageBanner2 = ({ info }: props) => {
               unoptimized={true}
               priority={true}
             />
-          </Link>
+          </div>
         </div>
       </div>
     </div>
