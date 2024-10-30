@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { format } from "date-fns";
 import OneItem from "./OneItem";
 import SectionTwoItem from "./SectionTwoItem";
+import { useTranslation } from "next-i18next";
 
 const NewsList = () => {
   const router = useRouter();
@@ -15,12 +16,10 @@ const NewsList = () => {
   const size = 20;
   const [itemsList, setItemsList] = useRecoilState(newsListAtom);
   const [galleryList, setGalleryList] = useRecoilState(galleryListAtom);
-
+  const { t } = useTranslation("common");
   const BannerInfo = {
     title: "MODULAR CONTAINER\nPLANT FACTORY",
-    text:
-      "Is designed to enable the production  of always\nFRESH plants accessible to",
-    white_text: "“anyone, anytime, anywhere”.",
+    text: `${t("who_we_are_banner_text")}`,
 
     img: "/images/b5.png",
   };
@@ -44,7 +43,7 @@ const NewsList = () => {
   return (
     <div className="h-full relative">
       <PageBanner2 info={BannerInfo} />
-      <div id="section1" className="bg-white text-black whitespace-pre-line">
+      <div id="session_" className="bg-white text-black whitespace-pre-line">
         <div className=" max-w-[1800px] mx-auto w-full pt-24 pb-24">
           <div className="text-[48px] fontVarelmo uppercase text-black text-center pb-8">
             NEWS

@@ -107,7 +107,7 @@ const Page = () => {
       <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner info={locale === "en" ? BannerInfo : BannerInfoKo} />
 
-        <div className="   flex w-full max-md:flex-col">
+        <div id="session_" className="   flex w-full max-md:flex-col">
           {itemList?.map((item, index) => {
             return (
               <SectionOneItem

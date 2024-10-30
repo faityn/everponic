@@ -115,7 +115,7 @@ const Page = () => {
       <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner info={BannerInfo} />
 
-        <div id="section2" className="bg-white">
+        <div id="session_" className="bg-white">
           <div className="fontPretendard max-w-[1800px] mx-auto w-full pt-28 pb-24">
             <div className="flex max-md:flex-col gap-5">
               <div className="w-full ">

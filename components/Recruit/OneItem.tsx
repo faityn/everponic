@@ -27,7 +27,7 @@ const OneItem = ({ title, outlink, img }: props) => {
           </div>
 
           <div className="absolute bottom-3 right-3">
-            <Link href={`${outlink}`} className="">
+            <Link href={`${outlink}`} target="_blank" className="">
               <Image
                 src={`/svg/out_link.svg`}
                 alt="basket"
