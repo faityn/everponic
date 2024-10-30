@@ -758,3 +758,15 @@ background-color: #d3294d; */
     -webkit-text-stroke: 1px white; /* Adjust color and width as needed */
     color: transparent;
 }
+@keyframes colorLoop {
+    0%, 100% {
+      color: #767676; 
+    }
+    50% {
+      color: #ffffff; /* White */
+    }
+  }
+  
+  .color-loop {
+    animation: colorLoop 2.5s ease-in-out infinite;
+  }

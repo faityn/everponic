@@ -3,13 +3,16 @@ import PageBanner from "@src/components/Banner/PageBanner";
 
 import Image from "next/image";
 import Layout from "@src/components/Layout";
+import { useTranslation } from "next-i18next";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Page = () => {
+  const { t } = useTranslation("common");
   const BannerInfo = {
     title: "Distribution",
-    text:
-      "about sales channels by purchasing products from partners. It also allows consumers to receive the products they want, in the quantities they need, at reasonable prices, regardless of the season, through planned production and cultivation.",
-    white_text: "EVERPONIC addresses producers’ concerns",
+    text: `${t("distribution_banner_text")}`,
+
     white_text_type: "start",
     img: "/images/b4.png",
   };
@@ -47,7 +50,7 @@ const Page = () => {
   ];
   return (
     <Layout>
-      <div className="h-full relative">
+      <div className="h-full relative notranslate whitespace-pre-line">
         <PageBanner info={BannerInfo} />
         <div id="section2" className="bg-white text-black whitespace-pre-line">
           <div className=" max-w-[1800px] mx-auto w-full pt-28 pb-24">
@@ -95,3 +98,11 @@ const Page = () => {
 };
 
 export default Page;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale === "kr" ? "kr" : "en", [
+      "common",
+    ])),
+  },
+});

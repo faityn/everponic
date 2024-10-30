@@ -9,7 +9,7 @@ type props = {
 };
 const HeaderNew = ({ type }: props) => {
   return (
-    <div className=" absolute z-30 w-full flex items-center fontPretendard h-[70px ">
+    <div className=" absolute z-30 w-full flex items-center fontPretendard h-[70px notranslate">
       <nav className=" bg-transparent w-full">
         <div className="mx-auto max-w-[1800px] px-4  sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
