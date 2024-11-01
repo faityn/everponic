@@ -72,32 +72,32 @@ const Page = () => {
 
   const itemList3 = [
     {
-      title: "Easy Control",
+      title: `${t("Easy Control")}`,
       subText: `${t("Easy Control Text")}`,
       img: "/images/a5.gif",
     },
     {
-      title: "Year-Round Production",
+      title: `${t("Year-Round Production")}`,
       subText: `${t("Year-Round Production Text")}`,
       img: "/images/a6.gif",
     },
     {
-      title: "Minimal Water Usage",
+      title: `${t("Minimal Water Usage")}`,
       subText: `${t("Minimal Water Usage Text")}`,
       img: "/images/a7.gif",
     },
     {
-      title: "Work Efficiency",
+      title: `${t("Work Efficiency")}`,
       subText: `${t("Work Efficiency Text")}`,
       img: "/images/a8.gif",
     },
     {
-      title: "Less pesticides",
+      title: `${t("Less Pesticides")}`,
       subText: `${t("Less Pesticides Text")}`,
       img: "/images/a9.gif",
     },
     {
-      title: "High Quality & Yields",
+      title: `${t("High Quality & Yields")}`,
       subText: `${t("High Quality & Yields Text")}`,
       img: "/images/a10.gif",
     },

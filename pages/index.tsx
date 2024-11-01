@@ -189,34 +189,33 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-[#111111] pt-[80px] pb-[60px] h-full relative whitespace-pre-line notranslate">
-          <div className="fontPretendard text-[40px] max-md:text-[32px] max-md:leading-[48px]  text-white font-light mt-20 mb-40 leading-[54px] text-center">
-            {t("home_section_4_title")}
+          <div className="fontPretendard text-[40px] max-md:text-[32px] max-md:leading-[48px]  text-[#767676] font-light mt-20 mb-40 leading-[54px] text-center">
+            <div className={`${lang === "en" ? "" : "hidden"}`}>
+              We provides{" "}
+              <span className="text-white">one-stop CARE service</span>
+              <br /> for customers with easy work and <br /> stable profit
+              generation.
+            </div>
+            <div className={`${lang === "kr" ? "" : "hidden"}`}>
+              우리는 고객의 쉽고 안정적인 수익 창출을 위한 <br />
+              <span className="text-white">원스톱 케어 서비스</span>를
+              제공합니다.
+            </div>
           </div>
           <div className="h-full relative min-h-[700px] overflow-hidden">
             <div className="flex flex-col max-w-[1800px] m-auto h-full">
               <div className="max-sm:hidden">
                 <Swiper
                   speed={1000}
-                  //autoHeight={autoHeight}
                   autoplay={{
                     delay: 8000,
                     pauseOnMouseEnter: false,
                   }}
-                  //grabCursor={true}
                   onSwiper={(swiper) => {
                     swiperRef.current = swiper;
                   }}
                   slidesPerView={"auto"}
                   effect={"creative"}
-                  // creativeEffect={{
-                  //     prev: {
-                  //         shadow: true,
-                  //         translate: [-1, 0, "-20%"],
-                  //     },
-                  //     next: {
-                  //         translate: [0, 0, "100%"],
-                  //     },
-                  // }}
                   mousewheel={true}
                   loop={false}
                   direction={"vertical"}
