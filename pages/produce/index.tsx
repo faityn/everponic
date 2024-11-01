@@ -174,11 +174,11 @@ const Page = () => {
                     {t("produce_icon_3")}
                   </div>
                 </div>
-                <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[56px] max-xl:gap-[45px] max-md:gap-[30px] w-full justify-center items-center border-b sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
+                <div className="col-span-2 max-sm:col-span-5 flex flex-col gap-[48px] max-xl:gap-[36px] max-md:gap-[30px] w-full justify-center items-center border-b sm:border-r border-dashed border-[#353644] py-14 max-xl:py-10 max-md:py-6 px-5 ">
                   <Image
                     src="/svg/p_icon_4.svg"
                     alt="basket"
-                    className="w-12 h-12 max-xl:w-10 max-xl:h-10 max-sm:w-12 max-sm:h-12"
+                    className="w-14 h-14 max-xl:w-12 max-xl:h-12 max-sm:w-12 max-sm:h-12"
                     width="60"
                     height="60"
                     unoptimized={true}
@@ -272,16 +272,6 @@ const Page = () => {
                     {t("produce_icon_10")}
                   </div>
                 </div>
-                {/* {itemList3?.map((item, index) => {
-                                return (
-                                    <SectionThreeItem
-                                        key={index}
-                                        title={item?.title}
-                                        subText={item?.subText}
-                                        img={item?.img}
-                                    />
-                                );
-                            })} */}
               </div>
             </div>
           </div>
@@ -293,11 +283,11 @@ const Page = () => {
               {t("produce_title_3")}
             </div>
             <div className="h-full w-full flex max-md:flex-col gap-6 items-center justify-center ">
-              <div className=" ">
+              <div className="w-full h-[500px] max-xl:h-[400px] max-lg:h-[300px] max-sm:h-[200px]">
                 <Image
-                  src="/images/b3.png"
+                  src="/images/n1.png"
                   alt="basket"
-                  className=" object-cover object-center w-full"
+                  className="h-full object-cover object-center w-full"
                   width="888"
                   height="500"
                   unoptimized={true}
@@ -305,11 +295,11 @@ const Page = () => {
                 />
               </div>
 
-              <div className="">
+              <div className="w-full h-[500px] max-xl:h-[400px] max-lg:h-[300px] max-sm:h-[200px]">
                 <Image
-                  src="/images/p8.png"
+                  src="/images/n2.png"
                   alt="basket"
-                  className=" object-cover object-center w-full"
+                  className="h-full object-cover object-center w-full"
                   width="888"
                   height="500"
                   unoptimized={true}
