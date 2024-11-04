@@ -12,7 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const BannerInfo = {
   title: "PLANT FACTORY",
   text:
-    "Hydroponic vertical system maximizes cultivation space  to increase yields and minimizes water consumption by water cycling system.\n By utilizing ICT technology and an automated control system, we are able to\n produce always Fresh plants in an optimized environment.",
+    "Hydroponic vertical system maximizes cultivation space  to increase yields and minimizes water consumption by water cycling system.\n By utilizing ICT technology and an automated control system, we are able to\n produce always fresh plants in an optimized environment.",
 
   img: "/images/p1.png",
 };
@@ -219,10 +219,7 @@ const Page = () => {
               </div>
               <div className="w-full flex justify-end max-md:justify-center pt-5">
                 <p className="max-w-[550px] max-md:max-w-[358px] text-xl text-[#cccccc] max-md:text-center">
-                  If you use EVERPONIC system…!
-                  <br />
-                  Harvest highly nutritious fresh plants on small land, with
-                  less labor and minimal water usage throughout the year.
+                  {t("Plant_factory_section_4_text_2")}
                 </p>
               </div>
             </div>

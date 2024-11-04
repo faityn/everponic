@@ -17,6 +17,8 @@ import FadeText from "@src/components/common/FadeText";
 import getLang from "@src/helper/getLang";
 import FadeTextKo from "@src/components/common/FadeTextKo";
 
+import YouTubeEmbed from "@src/components/common/YouTubeEmbed";
+
 const Home = () => {
   const activeLang = getLang();
   const { t } = useTranslation("common");
@@ -136,21 +138,21 @@ const Home = () => {
           </div>
           <div className="text-center max-w-[1496px] m-auto items-center  grid grid-cols-12 justify-center pt-20 ">
             <div className="col-span-12  ">
-              <video
-                controls={false}
-                playsInline={false}
-                autoPlay={true}
-                loop
-                muted
-                height="630"
-                preload="auto"
-                className="w-full md:h-[630px] object-cover rounded-xl "
-              >
-                <source
-                  src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1728718147/hrfp4mt0adrsor92aw4r.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              <YouTubeEmbed videoId="ImHVMd_eTDw" />
+              {/* <iframe
+                className="w-full h-full rounded-md"
+                src={`https://www.youtube.com/embed/ImHVMd_eTDw?si=OXfAZSbO5XESWsnX?autoplay=1&mute=1&loop=1`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              /> */}
+              {/* <iframe
+                src="https://www.youtube.com/embed/ImHVMd_eTDw?si=OXfAZSbO5XESWsnX?autoplay=true&mute=true&controls=true"
+                title="YouTube video player"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="w-full md:h-[630px] object-cover rounded-xl"
+              ></iframe> */}
             </div>
           </div>
         </div>
@@ -356,7 +358,7 @@ const Home = () => {
                                 </div>
                               </div>
 
-                              <div className="text-2xl max-xl:text-xl max-lg:text-md fontPretendard font-medium max-w-[600px] mt-10 max-lg:mt-5 max-sm:text-[10px] max-sm:leading-4 max-sm:mt-1">
+                              <div className="text-2xl max-xl:text-xl max-lg:text-md fontPretendard font-medium max-w-[800px] mt-10 max-lg:mt-5 max-sm:text-[10px] max-sm:leading-4 max-sm:mt-1 ">
                                 {t("solution_3_text")}
                               </div>
 
@@ -402,10 +404,24 @@ const Home = () => {
                             />
                           </div>
                           <div className="absolute w-full h-full m-auto top-0   py-5 ">
-                            <div className="flex items-center justify-center text-center w-full h-full pt-16 px-24 text-[50px]  leading-[68px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px]">
-                              {t("solution_4_text")}
-                              {/* The future business starts
-                            <br /> here, we grow with you. */}
+                            <div className="flex flex-col items-center justify-center text-center w-full h-full pt-16 px-24 text-[50px]  leading-[68px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px] ">
+                              <div className="mb-[70px]">
+                                {t("solution_4_text")}
+                              </div>
+                              <Link
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform?usp=sf_link"
+                                target="_blank"
+                              >
+                                <Image
+                                  src="/images/partner_link_button.png"
+                                  alt="basket"
+                                  className="w-auto h-auto  "
+                                  width="54"
+                                  height="54"
+                                  unoptimized={true}
+                                  priority={true}
+                                />
+                              </Link>
                             </div>
                           </div>
                         </div>
