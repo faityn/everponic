@@ -67,7 +67,7 @@ const Nav = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full flex max-sm:flex-col max-sm:gap-4">
+          <div className="w-full flex max-sm:flex-col max-sm:gap-4 whitespace-pre-line">
             <div className="min-w-[200px] max-lg:min-w-[200px] max-md:w-full fontPretendard">
               <div className="text-md mb-3">Media</div>
               <Link
@@ -89,11 +89,10 @@ const Nav = () => {
                 Phone: +82 010 8189 0920
               </div>
               <div className="text-md mb-3 font-normal text-[#BABABA]">
-                E-mail: everponic@gmail.com
+                E-mail: {t("email")}
               </div>
               <div className="text-md mb-3 font-normal text-[#BABABA]">
-                Address: 35, Jinsaegol-gil, Chowol-eup, Gwangju-si, Gyeonggi-do,
-                Republic of Korea
+                Address: {t("address")}
               </div>
             </div>
           </div>
@@ -104,7 +103,25 @@ const Nav = () => {
           <p>© Copyright 2024 - All Rights Reserved</p>
         </div>
         <div className="flex w-full gap-3 justify-end max-sm:justify-center">
-          <Link href="/#">
+          <Link
+            href="https://www.youtube.com/watch?v=ImHVMd_eTDw"
+            target="_blank"
+          >
+            <Image
+              src="/images/youtube4.png"
+              alt="facebook"
+              className=" h-auto w-[34px] max-w-sm object-cover object-center  rounded-lg"
+              width="34"
+              height="34"
+              unoptimized={true}
+              priority={true}
+            />
+          </Link>
+
+          <Link
+            href="https://www.facebook.com/profile.php?id=61567884455506"
+            target="_blank"
+          >
             <Image
               src="/facebook.svg"
               alt="facebook"
@@ -115,7 +132,10 @@ const Nav = () => {
               priority={true}
             />
           </Link>
-          <Link href="/#">
+          <Link
+            href="https://www.instagram.com/everponic/profilecard/?igsh=MTZ5eWVvZ2RyNWJsMg=="
+            target="_blank"
+          >
             <Image
               src="/instagram.svg"
               alt="instagram"
@@ -126,7 +146,10 @@ const Nav = () => {
               priority={true}
             />
           </Link>
-          <Link href="/#">
+          <Link
+            href="https://www.linkedin.com/in/kim-chris-36745832a"
+            target="_blank"
+          >
             <Image
               src="/linkedin.svg"
               alt="linkedin"

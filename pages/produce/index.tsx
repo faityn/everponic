@@ -278,21 +278,10 @@ const Page = () => {
         </div>
 
         <div id="section3" className="bg-[#111111]  relative ">
-          <div className=" h-full w-full max-w-[1800px] mx-auto top-0  pb-20">
-            <div className="w-full text-[#cccccc] max-w-[976px] text-[38px] fontRobotoMedium py-16 leading-[52px]">
-              {t("produce_title_3")}
-            </div>
+          <div className=" h-full w-full max-w-[1800px] mx-auto top-0  py-20 max-md:py-10">
             <div className="h-full w-full flex max-md:flex-col gap-6 items-center justify-center ">
-              <div className="w-full h-[500px] max-xl:h-[400px] max-lg:h-[300px] max-sm:h-[200px]">
-                <Image
-                  src="/images/n1.png"
-                  alt="basket"
-                  className="h-full object-cover object-center w-full"
-                  width="888"
-                  height="500"
-                  unoptimized={true}
-                  priority={true}
-                />
+              <div className="w-full flex  items-center text-[#cccccc] text-[38px] leading-[52px] max-sm:text-2xl h-[500px] max-xl:h-[400px] max-lg:h-[300px] max-sm:h-[200px] fontRobotoMedium">
+                {t("produce_title_3")}
               </div>
 
               <div className="w-full h-[500px] max-xl:h-[400px] max-lg:h-[300px] max-sm:h-[200px]">

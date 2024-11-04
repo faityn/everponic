@@ -16,7 +16,6 @@ const FaqList = () => {
 
   const getData = async () => {
     const response = await getFaqList(Number(currPage), Number(size));
-    console.log(response);
 
     if (response?.status) {
       setItemsList(response?.result?.responseObject);
