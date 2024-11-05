@@ -43,38 +43,22 @@ const Page = () => {
               priority={true}
             />
           </div>
-          <div className=" max-w-[1400px] mx-auto w-full pt-10 pb-24">
-            <div className="flex max-md:flex-col justify-between w-full ">
-              <div className="full pl-4 ">
-                <div className="text-[30px] leading-[40px] max-md:text-center fontVarelmo uppercase text-black  pb-8 ">
-                  Contact Us
-                </div>
-                <div className="text-3xl text-primary mb-5">
-                  soo5028@everponic.com
-                </div>
-                <div className="text-3xl text-black mb-5 font-semibold">
-                  WhatsApp
-                </div>
-                <div className="">
-                  <Image
-                    src="/images/contact.png"
-                    alt="basket"
-                    className="h-auto border object-cover object-center w-[140px] "
-                    width="130"
-                    height="50"
-                    unoptimized={true}
-                    priority={true}
-                  />
+          <div className=" max-w-[1800px] mx-auto w-full pt-10 pb-24">
+            <div className="flex max-lg:flex-col justify-between w-full ">
+              <div className="w-full pl-4 ">
+                <div className="text-[80px] leading-[90px] max-xl:text-[50px] max-xl:leading-[60px] max-sm:text-[30px] max-sm:leading-[40px] max-md:text-center fontVarelmo uppercase text-black  pb-8 pt-10 ">
+                  Contact <br />
+                  Us
                 </div>
               </div>
-              <div className="full">
-                <div className="">
+              <div className="w-full flex gap-20 max-sm:flex-col ">
+                <div className="w-full">
                   {" "}
                   <div className="relative rounded-2xl">
                     <Image
                       src="/images/partner.png"
                       alt="basket"
-                      className="h-auto object-cover object-center w-full rounded-2xl "
+                      className="h-auto object-cover object-center min-w-[300px] max-sm:max-h-[300px] w-full rounded-2xl "
                       width="100"
                       height="100"
                       unoptimized={true}
@@ -104,6 +88,28 @@ const Page = () => {
                         </Link>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center  w-full">
+                  <div className="text-xl mb-5 font-semibold text-black">
+                    Email
+                  </div>
+                  <div className="text-xl text-black mb-10">
+                    soo5028@everponic.com
+                  </div>
+                  <div className="text-xl text-black mb-5 font-semibold">
+                    WhatsApp
+                  </div>
+                  <div className="">
+                    <Image
+                      src="/images/contact.png"
+                      alt="basket"
+                      className="h-auto border object-cover object-center w-[140px] "
+                      width="130"
+                      height="50"
+                      unoptimized={true}
+                      priority={true}
+                    />
                   </div>
                 </div>
               </div>

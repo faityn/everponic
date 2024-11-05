@@ -17,7 +17,7 @@ import FadeText from "@src/components/common/FadeText";
 import getLang from "@src/helper/getLang";
 import FadeTextKo from "@src/components/common/FadeTextKo";
 
-import YouTubeEmbed from "@src/components/common/YouTubeEmbed";
+import Popup from "@src/components/common/Popup";
 
 const Home = () => {
   const activeLang = getLang();
@@ -121,7 +121,7 @@ const Home = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-
+        <Popup />
         <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px] relative notranslate">
           <div className="text-[#0081DE] text-center w-full text-[18px] max-sm:text-sm notranslate">
             WHO WE ARE
@@ -138,21 +138,18 @@ const Home = () => {
           </div>
           <div className="text-center max-w-[1496px] m-auto items-center  grid grid-cols-12 justify-center pt-20 ">
             <div className="col-span-12  ">
-              <YouTubeEmbed videoId="ImHVMd_eTDw" />
-              {/* <iframe
-                className="w-full h-full rounded-md"
-                src={`https://www.youtube.com/embed/ImHVMd_eTDw?si=OXfAZSbO5XESWsnX?autoplay=1&mute=1&loop=1`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              /> */}
-              {/* <iframe
-                src="https://www.youtube.com/embed/ImHVMd_eTDw?si=OXfAZSbO5XESWsnX?autoplay=true&mute=true&controls=true"
-                title="YouTube video player"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                className="w-full md:h-[630px] object-cover rounded-xl"
-              ></iframe> */}
+              <video
+                controls={false}
+                playsInline={false}
+                autoPlay={true}
+                loop
+                muted
+                height="700"
+                preload="auto"
+                className="w-full md:h-[700px] object-cover rounded-xl "
+              >
+                <source src="/images/video.webm" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>

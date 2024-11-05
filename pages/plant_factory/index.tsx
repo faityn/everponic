@@ -120,7 +120,7 @@ const Page = () => {
           })}
         </div>
 
-        <div className="min-h-[600px] h-[600px] max-md:min-h-[800px] relative border">
+        <div className="min-h-[600px] h-[600px] max-md:min-h-[800px] max-sm:min-h-full  relative border">
           <Image
             src="/images/p2.png"
             alt="basket"
@@ -131,11 +131,11 @@ const Page = () => {
             priority={true}
           />
           <div className="absolute h-full w-full bg-black/80 top-0 flex max-md:flex-col gap-6 items-center justify-center px-8 ">
-            <div className=" ">
+            <div className="w-full ">
               <Image
-                src="/images/p3.png"
+                src="/images/p33.png"
                 alt="basket"
-                className=" object-cover object-center w-full"
+                className="max-h-[500px] rounded-3xl object-cover object-center w-full"
                 width="500"
                 height="250"
                 unoptimized={true}
@@ -143,11 +143,11 @@ const Page = () => {
               />
             </div>
 
-            <div className="">
+            <div className="w-full">
               <Image
                 src="/images/p4.png"
                 alt="basket"
-                className=" object-cover object-center w-full"
+                className="max-h-[500px] rounded-3xl object-cover object-center w-full"
                 width="500"
                 height="250"
                 unoptimized={true}
