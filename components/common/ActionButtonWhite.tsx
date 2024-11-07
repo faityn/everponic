@@ -6,7 +6,7 @@ const ActionButtonWhite = () => {
       <Image
         src="/images/action_button_white.png"
         alt="basket"
-        className="w-auto h-auto  "
+        className="w-auto h-auto max-sm:h-[40px] "
         width="54"
         height="54"
         unoptimized={true}

@@ -173,7 +173,7 @@ const Home = () => {
                 loop
                 muted
                 preload="auto"
-                className="w-full md:h-[900px] max-sm:h-[556px] object-cover  "
+                className="w-full md:h-[900px] max-sm:h-[306px] object-cover  "
               >
                 <source
                   src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1730961626/-693a-49ea-85ed-5ebe67da13ef_yqbagf.webm"
@@ -183,7 +183,7 @@ const Home = () => {
               <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
                 <div className="text-center px-[60px] flex flex-col justify-center items-center  h-full">
                   <div
-                    className={`fontPretendard lg:text-[64px]  text-white font-medium leading-[80px] `}
+                    className={`fontPretendard lg:text-[64px]  text-white font-medium leading-[80px] max-sm:leading-10`}
                   >
                     {t("middle_video_text")}
                   </div>
