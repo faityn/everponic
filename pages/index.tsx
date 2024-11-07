@@ -139,7 +139,6 @@ const Home = () => {
           <div className="text-center max-w-[1496px] m-auto items-center  grid grid-cols-12 justify-center pt-20 ">
             <div className="col-span-12  ">
               <video
-                src="/images/video.webm"
                 controls={false}
                 playsInline={false}
                 autoPlay={true}
@@ -148,7 +147,12 @@ const Home = () => {
                 height="700"
                 preload="auto"
                 className="w-full md:h-[700px] object-cover rounded-xl "
-              ></video>
+              >
+                <source
+                  src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1730962019/111111_55_awmjj4.webm"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </div>
         </div>
@@ -156,7 +160,6 @@ const Home = () => {
           <div className="text-center  ">
             <div className="relative flex justify-center items-center ">
               <video
-                src="/images/home_video_2.webm"
                 controls={false}
                 playsInline={false}
                 autoPlay={true}
@@ -165,7 +168,10 @@ const Home = () => {
                 preload="auto"
                 className="w-full md:h-[900px] max-sm:h-[556px] object-cover  "
               >
-                {/* <source src="/images/home_video_2.webm" type="video/webm" /> */}
+                <source
+                  src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1730961626/-693a-49ea-85ed-5ebe67da13ef_yqbagf.webm"
+                  type="video/webm"
+                />
               </video>
               <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
                 <div className="text-center px-[60px] flex flex-col justify-center items-center  h-full">
