@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import ActionButtonWhite from "@src/components/common/ActionButtonWhite";
+//import ActionButtonWhite from "@src/components/common/ActionButtonWhite";
 import Layout from "@src/components/Layout";
 import { useTranslation } from "next-i18next";
 import FadeText from "@src/components/common/FadeText";
@@ -165,22 +165,22 @@ const Home = () => {
         </div>
         <div className="whitespace-pre-line notranslate">
           <div className="text-center  ">
-            <div className="relative flex justify-center items-center ">
+            <div className="relative  ">
               <video
                 controls={false}
-                playsInline={false}
+                playsInline={true}
                 autoPlay={true}
                 loop
                 muted
                 preload="auto"
-                className="w-full md:h-[900px] max-sm:h-[306px] object-cover  "
+                className="w-full md:h-[900px] max-sm:h-[256px] object-cover  "
               >
                 <source
                   src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1730961626/-693a-49ea-85ed-5ebe67da13ef_yqbagf.webm"
                   type="video/webm"
                 />
               </video>
-              <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
+              {/* <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
                 <div className="text-center px-[60px] flex flex-col justify-center items-center  h-full">
                   <div
                     className={`fontPretendard lg:text-[64px]  text-white font-medium leading-[80px] max-sm:leading-10`}
@@ -197,7 +197,7 @@ const Home = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
