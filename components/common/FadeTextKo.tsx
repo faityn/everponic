@@ -13,7 +13,8 @@ const FadeTextKo: React.FC = () => {
         loop={true}
         slidesPerView={1}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
-        navigation
+        navigation={false}
+        allowTouchMove={false}
         direction={"vertical"}
         className="mySwiper w-full h-[300px]"
       >

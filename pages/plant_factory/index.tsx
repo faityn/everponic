@@ -132,27 +132,51 @@ const Page = () => {
           />
           <div className="absolute h-full w-full bg-black/80 top-0 flex max-md:flex-col gap-6 items-center justify-center px-8 ">
             <div className="w-full ">
-              <Image
-                src="/images/p33.png"
-                alt="basket"
-                className="max-h-[500px] rounded-3xl object-cover object-center w-full"
-                width="500"
-                height="250"
-                unoptimized={true}
-                priority={true}
-              />
+              {locale === "kr" ? (
+                <Image
+                  src="/images/p33_ko.png"
+                  alt="basket"
+                  className="max-h-[500px] rounded-3xl object-cover object-center w-full"
+                  width="500"
+                  height="250"
+                  unoptimized={true}
+                  priority={true}
+                />
+              ) : (
+                <Image
+                  src="/images/p33.png"
+                  alt="basket"
+                  className="max-h-[500px] rounded-3xl object-cover object-center w-full"
+                  width="500"
+                  height="250"
+                  unoptimized={true}
+                  priority={true}
+                />
+              )}
             </div>
 
             <div className="w-full">
-              <Image
-                src="/images/p4.png"
-                alt="basket"
-                className="max-h-[500px] rounded-3xl object-cover object-center w-full"
-                width="500"
-                height="250"
-                unoptimized={true}
-                priority={true}
-              />
+              {locale === "kr" ? (
+                <Image
+                  src="/images/p4_ko.png"
+                  alt="basket"
+                  className="max-h-[500px] rounded-3xl object-cover object-center w-full"
+                  width="500"
+                  height="250"
+                  unoptimized={true}
+                  priority={true}
+                />
+              ) : (
+                <Image
+                  src="/images/p4.png"
+                  alt="basket"
+                  className="max-h-[500px] rounded-3xl object-cover object-center w-full"
+                  width="500"
+                  height="250"
+                  unoptimized={true}
+                  priority={true}
+                />
+              )}
             </div>
           </div>
         </div>
