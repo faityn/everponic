@@ -80,47 +80,51 @@ const Home = () => {
           <link ref={ref} href="/favicon.ico" hrefLang="en" />
           <link ref={ref} href="/favicon.ico" hrefLang="ko" />
         </Head>
-
-        <Swiper
-          speed={1000}
-          autoHeight={autoHeight}
-          autoplay={{
-            delay: 8000,
-            pauseOnMouseEnter: false,
-          }}
-          slidesPerView={1}
-          mousewheel={false}
-          loop={true}
-          direction={direction}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Autoplay, Mousewheel]}
-          className="mySwiper  w-full h-auto "
-        >
-          <SwiperSlide className="mx-auto bg-white ">
-            <div className="w-full h-screen max-sm:h-[500px] bg-cover ">
-              <div className="text-center  items-center flex flex-col  justify-center ">
-                <video
-                  controls={false}
-                  playsInline={true}
-                  autoPlay={true}
-                  ref={vidRef}
-                  muted
-                  loop
-                  preload="auto"
-                  className="w-full h-screen max-sm:h-[500px] object-cover "
-                >
-                  <source
-                    src="https://res.cloudinary.com/do5useihi/video/upload/v1730280284/Comp_1_h2vsf1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-                <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+        <div className="relative">
+          <Swiper
+            speed={1000}
+            autoHeight={autoHeight}
+            autoplay={{
+              delay: 8000,
+              pauseOnMouseEnter: false,
+            }}
+            slidesPerView={1}
+            mousewheel={false}
+            loop={true}
+            direction={direction}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination, Autoplay, Mousewheel]}
+            className="mySwiper  w-full h-auto "
+          >
+            <SwiperSlide className="mx-auto bg-white ">
+              <div className="w-full h-screen max-sm:h-[500px] bg-cover ">
+                <div className="text-center  items-center flex flex-col  justify-center ">
+                  <video
+                    controls={false}
+                    playsInline={true}
+                    autoPlay={true}
+                    ref={vidRef}
+                    muted
+                    loop
+                    preload="auto"
+                    className="w-full h-screen max-sm:h-[500px] object-cover "
+                  >
+                    <source
+                      src="https://res.cloudinary.com/do5useihi/video/upload/v1730280284/Comp_1_h2vsf1.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div className="absolute max-w-[650px] m-auto  bg-black/40  py-5 "></div>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+          </Swiper>
+          <div className="absolute z-50 top-0 bg-transparent w-full h-full">
+            {" "}
+          </div>
+        </div>
         <Popup />
         <div className="bg-[#111111] pt-[130px] pb-[130px] max-sm:pt-[50px] max-sm:pb-[30px] relative notranslate">
           <div className="text-[#0081DE] text-center w-full text-[18px] max-sm:text-sm notranslate">
@@ -140,7 +144,7 @@ const Home = () => {
             <div className="col-span-12  ">
               <video
                 controls={false}
-                playsInline={false}
+                playsInline={true}
                 autoPlay={true}
                 loop
                 muted
@@ -154,6 +158,9 @@ const Home = () => {
                 />
               </video>
             </div>
+          </div>
+          <div className="absolute z-50 top-0 bg-transparent w-full h-full">
+            {" "}
           </div>
         </div>
         <div className="whitespace-pre-line notranslate">
@@ -212,7 +219,7 @@ const Home = () => {
             <div className="flex flex-col max-w-[1800px] m-auto h-full">
               <div className="max-sm:hidden">
                 <Swiper
-                  speed={1000}
+                  speed={300}
                   autoplay={{
                     delay: 8000,
                     pauseOnMouseEnter: false,
