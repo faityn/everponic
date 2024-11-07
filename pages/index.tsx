@@ -121,7 +121,7 @@ const Home = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          <div className="absolute z-50 top-0 bg-transparent w-full h-full">
+          <div className="absolute z-20 top-0 bg-transparent w-full h-full">
             {" "}
           </div>
         </div>
@@ -159,7 +159,7 @@ const Home = () => {
               </video>
             </div>
           </div>
-          <div className="absolute z-50 top-0 bg-transparent w-full h-full">
+          <div className="absolute z-20 top-0 bg-transparent w-full h-full">
             {" "}
           </div>
         </div>
