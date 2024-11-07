@@ -146,11 +146,11 @@ const Home = () => {
                 muted
                 height="700"
                 preload="auto"
-                className="w-full md:h-[700px] object-cover rounded-xl "
+                className="w-full md:h-[700px] max-sm:h-[276px] object-cover rounded-xl "
               >
                 <source
                   src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1730962019/111111_55_awmjj4.webm"
-                  type="video/mp4"
+                  type="video/webm"
                 />
               </video>
             </div>
