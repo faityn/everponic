@@ -165,10 +165,7 @@ const Home = () => {
                 preload="auto"
                 className="w-full md:h-[900px] max-sm:h-[556px] object-cover  "
               >
-                <source
-                  src="https://res.cloudinary.com/dhlerg3fo/video/upload/v1728722943/l7vjfgilhj81dvhbdp6k.mp4"
-                  type="video/mp4"
-                />
+                <source src="/images/home_video_2.webm" type="video/mp4" />
               </video>
               <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
                 <div className="text-center px-[60px] flex flex-col justify-center items-center  h-full">
@@ -178,7 +175,11 @@ const Home = () => {
                     {t("middle_video_text")}
                   </div>
                   <div className="mt-10">
-                    <Link href="#">
+                    <Link
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform?usp=sf_link
+"
+                      target="_blank"
+                    >
                       <ActionButtonWhite />
                     </Link>
                   </div>

@@ -12,12 +12,15 @@ const FadeText: React.FC = () => {
         effect="fade"
         loop={true}
         slidesPerView={1}
+        draggable={false}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
-        navigation
+        pagination={false}
+        navigation={false}
+        allowTouchMove={false}
         direction={"vertical"}
         className="mySwiper w-full h-[300px]"
       >
-        <SwiperSlide className="bg-[#111111]">
+        <SwiperSlide className="bg-[#111111] non-clickable">
           <div className={`w-full text-center color-loop`}>
             We provides modular container plant factory capable of{" "}
           </div>
@@ -35,7 +38,7 @@ const FadeText: React.FC = () => {
             they desire through planned production and cultivation.
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#111111]">
+        <SwiperSlide className="bg-[#111111] non-clickable">
           <div className={`w-full text-center text-greyText `}>
             We provides modular container plant factory capable of{" "}
           </div>
@@ -53,7 +56,7 @@ const FadeText: React.FC = () => {
             they desire through planned production and cultivation.
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#111111]">
+        <SwiperSlide className="bg-[#111111] non-clickable">
           <div className={`w-full text-center text-greyText`}>
             We provides modular container plant factory capable of{" "}
           </div>
@@ -71,7 +74,7 @@ const FadeText: React.FC = () => {
             they desire through planned production and cultivation.
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#111111]">
+        <SwiperSlide className="bg-[#111111] non-clickable">
           <div className={`w-full text-center text-greyText`}>
             We provides modular container plant factory capable of{" "}
           </div>
@@ -89,7 +92,7 @@ const FadeText: React.FC = () => {
             they desire through planned production and cultivation.
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#111111]">
+        <SwiperSlide className="bg-[#111111] non-clickable">
           <div className={`w-full text-center text-greyText `}>
             We provides modular container plant factory capable of{" "}
           </div>
