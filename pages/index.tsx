@@ -168,7 +168,7 @@ const Home = () => {
             <div className="relative  ">
               <video
                 controls={false}
-                playsInline={false}
+                playsInline={true}
                 autoPlay={true}
                 loop
                 muted
