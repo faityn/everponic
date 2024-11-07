@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-//import ActionButtonWhite from "@src/components/common/ActionButtonWhite";
+import ActionButtonWhite from "@src/components/common/ActionButtonWhite";
 import Layout from "@src/components/Layout";
 import { useTranslation } from "next-i18next";
 import FadeText from "@src/components/common/FadeText";
@@ -180,7 +180,7 @@ const Home = () => {
                   type="video/webm"
                 />
               </video>
-              {/* <div className="absolute max-w-full  h-full w-full bg-black/40  py-5 ">
+              <div className="absolute max-w-full z-20 h-full w-full top-0 bg-black/40  py-5 ">
                 <div className="text-center px-[60px] flex flex-col justify-center items-center  h-full">
                   <div
                     className={`fontPretendard lg:text-[64px]  text-white font-medium leading-[80px] max-sm:leading-10`}
@@ -197,7 +197,7 @@ const Home = () => {
                     </Link>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
