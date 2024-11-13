@@ -65,7 +65,7 @@ const Page = () => {
                       priority={true}
                     />{" "}
                     <div className=" absolute top-0 rounded-2xl p-5 w-full border h-full">
-                      <div className="w-full text-3xl text-white font-semibold mb-3 uppercase max-w-[216px] ">
+                      <div className="w-full text-[34px] text-white font-semibold mb-3 uppercase max-w-[216px] ">
                         Partner
                         <br /> with us
                       </div>
