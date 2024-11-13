@@ -619,10 +619,22 @@ const Home = () => {
                           />
                         </div>
                         <div className="absolute w-full h-full m-auto top-0   py-5 ">
-                          <div className="flex items-center justify-center text-center w-full h-full pt-16 max-sm:pt-2 px-24 text-[70px]  leading-[88px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px] max-sm:text-xl ">
+                          <div className="flex flex-col items-center justify-center text-center w-full h-full pt-16 max-sm:pt-2 px-24 max-sm:px-5 text-[70px]  leading-[88px] RobotoRegular font-semibold max-xl:text-[40px] max-xl:leading-[48px] max-sm:text-xl ">
                             {t("solution_4_text")}
-                            {/* The future business starts
-                            <br /> here, we grow with you. */}
+                            <Link
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform?usp=sf_link"
+                                target="_blank"
+                              >
+                                <Image
+                                  src="/images/partner_link_button.png"
+                                  alt="basket"
+                                  className="w-[110px] h-auto mt-2 "
+                                  width="54"
+                                  height="54"
+                                  unoptimized={true}
+                                  priority={true}
+                                />
+                              </Link>
                           </div>
                         </div>
                       </div>

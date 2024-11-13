@@ -11,7 +11,7 @@ interface Props {
 const Layout: FC<Props> = ({ children, type }) => {
   return (
     <>
-      <div className={`text-white bg-cover bg-no-repeat  relative`}>
+      <div className={`text-white bg-cover bg-no-repeat  relative break-keep`}>
         <HeaderNew type={type} />
         {children}
         <FooterNav />
