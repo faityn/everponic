@@ -85,9 +85,9 @@ const Nav = () => {
             </div>
             <div className="min-w-[250px] max-lg:min-w-[200px] max-md:w-full fontPretendard">
               <div className="text-md mb-3">Contact</div>
-              <div className="text-md mb-3  font-normal text-[#BABABA]">
+              {/* <div className="text-md mb-3  font-normal text-[#BABABA]">
                 Phone: +82 010 8189 0920
-              </div>
+              </div> */}
               <div className="text-md mb-3 font-normal text-[#BABABA]">
                 E-mail: {t("email")}
               </div>
