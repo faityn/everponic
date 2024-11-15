@@ -72,7 +72,7 @@ const GoogleTranslate = () => {
           zIndex: -99999,
         }}
       ></div>
-      <div className="uppercase   notranslate ">
+      <div className="uppercase notranslate ">
         {locale === "kr" ? (
           <div className="flex flex-col gap-4 px-4 w-[150px] py-3">
             <div
