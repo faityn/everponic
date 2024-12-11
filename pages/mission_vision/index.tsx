@@ -33,7 +33,7 @@ const Page = () => {
                                 </div>
 
                                 <div className="flex justify-end max-lg:justify-center max-w-[729px] mt-16 lg:pr-36">
-                                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform" target="_blank">
+                                    <Link href="https://forms.gle/6HA7xiJmY7EHocrR7" target="_blank">
                                         <ActionButton />
                                     </Link>
                                 </div>

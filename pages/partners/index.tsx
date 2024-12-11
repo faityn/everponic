@@ -72,7 +72,7 @@ const Page = () => {
 
                       <div className="absolute bottom-3 right-3">
                         <Link
-                          href={`https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform`}
+                          href={`https://forms.gle/6HA7xiJmY7EHocrR7`}
                           target="_blank"
                           className=""
                         >
