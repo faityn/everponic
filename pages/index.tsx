@@ -466,7 +466,7 @@ const Home = () => {
                                                                 )}
                                                             </div>
                                                             <Link
-                                                                href="https://docs.google.com/forms/d/e/1FAIpQLSfpuO9ymNmZrK7IiY_n4mrNtvqXrU7Ec9MyOBmPz0bXQ_8EEw/viewform?usp=sf_link"
+                                                                href="https://forms.gle/6HA7xiJmY7EHocrR7"
                                                                 target="_blank"
                                                             >
                                                                 <Image
